@@ -1,0 +1,21 @@
+.breadcrumb {
+  margin: 20px 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    white-space: nowrap;
+    line-height: 13px;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 14px;
+
+    span {
+      white-space: normal;
+    }
+
+    a {border-bottom: none;}
+  }
+}

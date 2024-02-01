@@ -1,0 +1,44 @@
+include checkbox
+
+mixin drawer-form(data)
+  .drawer-form
+    .drawer-form__container
+      .drawer-form__header
+        .drawer-form__close(data-close='drawer-close')
+      .drawer-form__content
+        form.form.form--contact
+          input(type='hidden' name='form_type' value="feedback")
+          input(type='hidden' name='form_place' value="Кнопка Связаться с нами в шапке сайта")
+          .form__field
+            .form__input
+              label
+                .form__label Имя и фамилия *
+                input(type="text" name="fio").form__control
+          .form__field
+            .form__input
+              label
+                .form__label Телефон *
+                input(type="text" name="phone").form__control
+          .form__field
+            .form__input
+              label
+                .form__label E-mail *
+                input(type="text" name="email").form__control
+          .form__field
+            .form__input
+              label
+                .form__label Компания *
+                input(type="text" name="company").form__control
+          .form__field
+            .form__input.form__input--textarea
+              label
+                .form__label Комментарий
+                textarea(name="comment").form__control
+          .form__field
+            +checkbox({
+              text: "",
+              name: "policy"
+            })
+          .form__message
+          .form__bottom
+            button(type="submit" disabled).btn.btn--lg.btn--outline-primary Отправить

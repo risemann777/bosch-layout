@@ -1,0 +1,23 @@
+extends layouts/main/layout
+
+block vars
+  - browserTitle = 'Список страниц';
+  - headlineTitle = 'Список страниц'
+  - headlineText = 'Список всех страниц, которые есть на сайте'
+
+block content
+  .duty-pages
+    .duty-pages__container
+      .duty-pages__group
+        .duty-pages__group-title Интерфейс и типографика
+        .duty-pages__item
+          a(href="gui.html" target="_blank").duty-pages__link GUI
+      .duty-pages__group
+        .duty-pages__group-title ФЗ
+        .duty-pages__item
+          a(href="policy.html" target="_blank").duty-pages__link Страница конфиденциальности
+        .duty-pages__item
+          a(href="disclaimer.html" target="_blank").duty-pages__link Отказ от ответственности
+
+
+

@@ -1,0 +1,15 @@
+mixin breadcrumb(data)
+  - items = data.items
+  ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList" class=data.class_modifier)
+    li(itemscope itemtype="http://schema.org/ListItem").breadcrumb-item
+      a(href="/" itemprop="item"): svg(class="svg-icon" viewBox="0 0 13 13" width="13" height="13"): use(xlink:href="#svg-breadcrumb-home")
+      meta(itemprop="position" content="1")
+      meta(itemprop="name" content="Главная")
+    each item, index in items
+      li(itemscope itemtype="http://schema.org/ListItem").breadcrumb-item
+        if item.link
+          a(href=item.link itemprop="item")= item.name
+        else
+          span(itemprop="item")= item.name
+        meta(itemprop="position" content=index+2)
+        meta(itemprop="name" content=item.name)

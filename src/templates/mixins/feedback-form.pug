@@ -1,0 +1,42 @@
+include checkbox
+
+mixin feedback-form(data)
+  form.form.form--feedback
+    if data.form_type
+      input(type='hidden' name='form_type' value=data.form_type)
+    if data.form_place
+      input(type='hidden' name='form_place' value=data.form_place)
+    .form__row
+      .form__field
+        .form__input
+          label
+            .form__label Имя и фамилия *
+            input(type="text" name="fio").form__control
+      .form__field
+        .form__input
+          label
+            .form__label Телефон *
+            input(type="text" name="phone").form__control
+      .form__field
+        .form__input
+          label
+            .form__label E-mail *
+            input(type="text" name="email").form__control
+      .form__field
+        .form__input
+          label
+            .form__label Компания *
+            input(type="text" name="company").form__control
+    .form__field
+      .form__input.form__input--textarea
+        label
+          .form__label Комментарий
+          textarea(name="comment").form__control
+    .form__field
+      +checkbox({
+        text: "",
+        name: "policy"
+      })
+    .form__message
+    .form__bottom
+      button(type="submit" disabled).btn.btn--lg.btn--outline-primary Отправить

@@ -1,0 +1,48 @@
+include ../../mixins/headline
+
+- browserTitle = 'Главная';
+- headlineTitle = 'Главная headline'
+- headlineText = 'Дополнительный текст для headline'
+- pageTitle = 'Главная';
+- pageClass = 'page--main';
+- isIndexPage = false;
+block vars
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title #{browserTitle}
+    meta(name='description', content='')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap' rel='stylesheet')
+    link(rel='apple-touch-icon' sizes="180x180" href='images/favicon/apple-touch-icon.png')
+    link(rel='icon' type="image/png" sizes="512x512" href='images/favicon/android-chrome-512x512.png')
+    link(rel='icon' type="image/png" sizes="192x192" href='images/favicon/android-chrome-192x192.png')
+    link(rel='icon' type="image/png" sizes="32x32" href='images/favicon/favicon-32x32.png')
+    link(rel='icon' type="image/png" sizes="16x16" href='images/favicon/favicon-16x16.png')
+    link(rel='shortcut icon' href='images/favicon/favicon.ico')
+    link(rel='stylesheet' href='css/main.css')
+  body.page(class=pageClass)
+    include ../../components/svg-icons
+    .page__wrapper
+      block header
+        include header
+
+      main.page__main
+        .page__container
+          +headline({
+            title: headlineTitle,
+            text: headlineText
+          })
+
+          .page__content
+            block content
+
+      block footer
+        include footer
+
+    script(src='js/main.bundle.js')

@@ -1,0 +1,47 @@
+.duty-pages {
+  &__container {
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__group {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__group-title {
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.8;
+    font-family: var(--mi-heading-font-family);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__item {
+    line-height: 1.2;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+    padding: 3px 0 0;
+  }
+}

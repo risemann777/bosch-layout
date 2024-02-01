@@ -1,0 +1,50 @@
+@font-face {
+  font-family: boschsans;
+  font-weight: 400;
+  src: url(../fonts/woff2/boschsans_regular.woff2) format("woff2"), url(../fonts/woff/boschsans_regular.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: boschsans;
+  font-weight: 700;
+  src: url(../fonts/woff2/boschsans_bold.woff2) format("woff2"), url(../fonts/woff/boschsans_bold.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: boschsans;
+  font-weight: 400;
+  src: url(../fonts/woff2/boschsans_regularitalic.woff2) format("woff2"), url(../fonts/woff/boschsans_regularitalic.woff) format("woff");
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: boschsans;
+  font-weight: 700;
+  src: url(../fonts/woff2/boschsans_bolditalic.woff2) format("woff2"), url(../fonts/woff/boschsans_bolditalic.woff) format("woff");
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Bosch-Icon;
+  src: url(../fonts/woff2/bosch_icon.woff2) format("woff2"), url(../fonts/woff/bosch_icon.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bosch-UI-Icon;
+  src: url(../fonts/woff2/bosch_ui_icon.woff2) format("woff2"), url(../fonts/woff/bosch_ui_icon.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bosch-UI-Icon-RTL;
+  src: url(../fonts/woff2/bosch_ui_icon_rtl.woff2) format("woff2"), url(../fonts/woff/bosch_ui_icon_rtl.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

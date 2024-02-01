@@ -1,0 +1,43 @@
+.footer {
+  position: relative;
+  background: #a9a9a9;
+
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+    @media(width >= 992px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__content {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px 30px;
+    flex-direction: column;
+
+    @media(width >= 576px) {
+      flex-direction: row;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
+}

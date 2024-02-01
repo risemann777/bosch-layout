@@ -1,0 +1,24 @@
+mixin discuss(data)
+  - title = data.title || null
+  - text = data.text || null
+  - buttonType = data.button_type || null
+  - buttonName = data.button_name || null
+  - toggle = data.toggle || null
+  - linkHref = data.link_href || null
+  .discuss
+    if title
+      .discuss__title=title
+    if text
+      .discuss__text=text
+    if buttonType === 'button'
+      .btn.btn--lg.btn--primary(data-toggle=toggle)
+        if buttonName
+          span=buttonName
+        else
+          span Название кнопки
+    if buttonType === 'link'
+      a(href=linkHref).btn.btn--lg.btn--primary
+        if buttonName
+          span=buttonName
+        else
+          span Название кнопки

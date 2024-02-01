@@ -1,0 +1,8 @@
+mixin client(data)
+  -items = data.items || null
+  .client
+    .client__list
+      if items
+        each item in items
+          .client__item
+            img.client_logo(src=item.logo)

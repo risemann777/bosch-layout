@@ -1,0 +1,61 @@
+@import "../../base/variables";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  &__main {
+    flex: 1 0 auto;
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media(width >= 992px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__title {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  &.menu-opened {
+    overflow-y: hidden;
+  }
+
+  &--desktop {
+    &.menu-opened {
+      padding-right: 17px;
+    }
+  }
+}

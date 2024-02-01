@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "rules": {
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "selector-id-pattern": null
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "customSyntax": "postcss-lit"
+    }
+  ]
+}

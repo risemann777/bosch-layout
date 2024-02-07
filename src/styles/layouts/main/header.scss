@@ -2,6 +2,7 @@
   transition: all 0.25s;
   z-index: 50;
   position: relative;
+  border-bottom: 1px solid #dfdfdf;
 
   &::before {
     position: absolute;
@@ -29,13 +30,17 @@
   }
 
   &__content {
-    padding: 22px 0;
+    padding: 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__logo {
+  &__brand {
+    display: block;
+    flex-shrink: 0;
+    text-decoration: none;
+
     .svg-icon {
       width: 115px;
       height: auto;
@@ -51,17 +56,10 @@
     display: flex;
     align-items: center;
     column-gap: 40px;
+    justify-content: flex-end;
 
     @media(width >= 1200px) {
-      column-gap: 70px;
-    }
-  }
-
-  &__feedback-btn {
-    display: none;
-
-    @media(width >= 768px) {
-      display: block;
+      column-gap: 10px;
     }
   }
 

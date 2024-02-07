@@ -1,9 +1,26 @@
 header.header.page__header
   .header__container
     .header__content
-      .header__logo: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
-      .header__menu
-        .main-menu
-          ul.main-menu__list
-            li.main-menu__item: a(href="/").main-menu__link Главная
-            li.main-menu__item: a(href="/list.html").main-menu__link Список страниц
+      a(href="/").header__brand: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
+      .header__controls
+        .header__navbar
+          nav.navbar
+            ul.navbar__list
+              li.navbar__item.navbar__item--dropdown
+                a(href="/products-and-services/").navbar__link Продукция и услуги
+                ul.navbar__dropdown
+                  li: a(href="/products-and-services--mobility/") Решения для мобильности
+                  li: a(href="/products-and-services--at-home/") Для дома
+                  li: a(href="/products-and-services--industry-and-trades/") Промышленность и торговля
+              li.navbar__item
+                a(href="/").navbar__link Новости и проекты
+              li.navbar__item.navbar__item--dropdown
+                a(href="/").navbar__link О компании
+                ul.navbar__dropdown
+                  li: a(href="/our-company--bosch-in-russia") Bosch в России
+                  li: a(href="/our-company--our-responsibility") Наша ответственность
+                  li: a(href="/our-company--our-history") Наша история
+                  li: a(href="/our-company--bosch-group-worldwide") Компания Bosch в мире
+              li.navbar__item
+                a(href="/").navbar__link Контакты
+        .header__buttons

@@ -1,0 +1,89 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.75em;
+    color: #000;
+  }
+
+  &__dropdown {
+    position: absolute;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    border-top: 3px solid #0784c3;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    background: #fff;
+    min-width: 10rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    @media(width >= 992px) {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-divider {
+      height: 0;
+      margin: 0.5rem 0;
+      overflow: hidden;
+      border: none;
+      border-top: 1px solid #e9ecef;
+    }
+
+    a {
+      display: block;
+      color: #000;
+      font-size: 14px;
+      width: 100%;
+      padding: 8px 14px;
+      text-decoration: none;
+      white-space: nowrap;
+      background-color: transparent;
+      transition: 0.1s;
+
+      &:hover {
+        color: #000;
+        background-color: #e9ecef;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+
+  &__item {
+    &--dropdown {
+      position: relative;
+
+      .navbar__link {
+        column-gap: 10px;
+
+        &::after {
+          content: "\203A";
+          font-size: 22px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &:hover {
+        .navbar {
+          &__dropdown {
+            opacity: 1;
+            pointer-events: initial;
+            animation: fadeInUp .2s ease;
+          }
+        }
+      }
+    }
+  }
+}

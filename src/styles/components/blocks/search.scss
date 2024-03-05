@@ -1,0 +1,41 @@
+.search {
+  position: relative;
+
+  &__input {
+    outline: none;
+    width: 100%;
+    border: 1px solid var(--bosch-gray-80);
+    padding: 0 50px 0 15px;
+    height: 40px;
+    border-radius: 0;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.4s;
+
+    &::placeholder {
+      color: #000;
+      opacity: 0.5;
+    }
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    border: none;
+    background: #fff;
+    padding: 0;
+  }
+
+  &__submit {
+
+  }
+
+  &__close {
+    display: none;
+  }
+}

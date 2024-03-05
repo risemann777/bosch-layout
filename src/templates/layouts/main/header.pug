@@ -1,7 +1,17 @@
 header.header.page__header
   .header__container
-    .header__content
+    .header__top
       a(href="/").header__brand: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
+      form.header__search.search
+        input(autocomplete="off" type="text" name="q" placeholder="Поиск по сайту").search__input
+        button(type="submit").search__button.search__submit
+          svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-search")
+        button(type="submit").search__button.search__close
+          svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-close")
+      a(href="#").header__buy.btn.btn--primary Где купить
+
+
+    .header__content
       .header__controls
         .header__navbar
           nav.navbar

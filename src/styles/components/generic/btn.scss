@@ -1,37 +1,39 @@
 @import "../../base/variables";
 
 .btn {
-  --mi-btn-bg: transparent;
-  --mi-btn-padding-y: 10px;
-  --mi-btn-padding-x: 22px;
-  --mi-btn-lg-padding-y: 16px;
-  --mi-btn-lg-padding-x: 30px;
-  --mi-btn-border-radius: 0.375rem;
-  --mi-btn-lg-border-radius: 0.6rem;
-  --mi-btn-font-family: 'Open Sans', sans-serif;
+  --bosch-btn-bg: transparent;
+  --bosch-btn-padding-y: 8px;
+  --bosch-btn-padding-x: 24px;
+  --bosch-btn-lg-padding-y: 16px;
+  --bosch-btn-lg-padding-x: 30px;
+  --bosch-btn-border-radius: 0;
+  --bosch-btn-lg-border-radius: 0.6rem;
+  --bosch-btn-font-family: var(--bosch-font-family);
+  --bosch-btn-font-size: 16px;
+  --bosch-btn-border-color: transparent;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--mi-btn-font-family);
+  font-family: var(--bosch-btn-font-family);
   font-weight: 400;
   user-select: none;
-  border: 1px solid var(--mi-btn-border-color);
-  background: var(--mi-btn-bg);
+  border: 1px solid var(--bosch-btn-border-color);
+  background: var(--bosch-btn-bg);
   text-decoration: none;
-  padding: var(--mi-btn-padding-y) var(--mi-btn-padding-x);
-  transition: all 0.2s;
-  font-size: 16px;
-  border-radius: var(--mi-btn-border-radius);
+  padding: var(--bosch-btn-padding-y) var(--bosch-btn-padding-x);
+  transition: 0.4s;
+  font-size: var(--bosch-btn-font-size);
+  border-radius: var(--bosch-btn-border-radius);
   cursor: default;
   line-height: 1.4;
   column-gap: 10px;
-  color: var(--mi-btn-color);
+  color: var(--bosch-btn-color);
 
   &:hover {
-    background: var(--mi-btn-hover-bg);
-    border-color: var(--mi-btn-hover-border-color);
-    color: var(--mi-btn-hover-color);
+    background: var(--bosch-btn-hover-bg);
+    border-color: var(--bosch-btn-hover-border-color);
+    color: var(--bosch-btn-hover-color);
   }
 
   &:not([disabled]) {
@@ -54,58 +56,58 @@
 
   &--lg {
     font-size: 20px;
-    padding: var(--mi-btn-lg-padding-y) var(--mi-btn-lg-padding-x);
-    border-radius: var(--mi-btn-lg-border-radius);
+    padding: var(--bosch-btn-lg-padding-y) var(--bosch-btn-lg-padding-x);
+    border-radius: var(--bosch-btn-lg-border-radius);
   }
 
   &--primary {
-    --mi-btn-color: #fff;
-    --mi-btn-bg: #0d6efd;
-    --mi-btn-border-color: #0d6efd;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #0b5ed7;
-    --mi-btn-hover-border-color: #0a58ca;
+    --bosch-btn-color: #fff;
+    --bosch-btn-bg: var(--bosch-blue-50);
+    --bosch-btn-border-color: var(--bosch-blue-50);
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: var(--bosch-blue-40);
+    --bosch-btn-hover-border-color: var(--bosch-blue-40);
   }
 
   &--outline-primary {
-    --mi-btn-color: #0d6efd;
-    --mi-btn-border-color: #0d6efd;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #0b5ed7;
-    --mi-btn-hover-border-color: #0a58ca;
+    --bosch-btn-color: #0d6efd;
+    --bosch-btn-border-color: #0d6efd;
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: #0b5ed7;
+    --bosch-btn-hover-border-color: #0a58ca;
   }
 
   &--success {
-    --mi-btn-color: #fff;
-    --mi-btn-bg: #198754;
-    --mi-btn-border-color: #199c68;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #157347;
-    --mi-btn-hover-border-color: #157347;
+    --bosch-btn-color: #fff;
+    --bosch-btn-bg: #198754;
+    --bosch-btn-border-color: #199c68;
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: #157347;
+    --bosch-btn-hover-border-color: #157347;
   }
 
   &--outline-success {
-    --mi-btn-color: #198754;
-    --mi-btn-border-color: #199c68;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #157347;
-    --mi-btn-hover-border-color: #157347;
+    --bosch-btn-color: #198754;
+    --bosch-btn-border-color: #199c68;
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: #157347;
+    --bosch-btn-hover-border-color: #157347;
   }
 
   &--danger {
-    --mi-btn-color: #fff;
-    --mi-btn-bg: #dc3545;
-    --mi-btn-border-color: #dc3545;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #bb2d3b;
-    --mi-btn-hover-border-color: #b02a37;
+    --bosch-btn-color: #fff;
+    --bosch-btn-bg: #dc3545;
+    --bosch-btn-border-color: #dc3545;
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: #bb2d3b;
+    --bosch-btn-hover-border-color: #b02a37;
   }
 
   &--outline-danger {
-    --mi-btn-color: #dc3545;
-    --mi-btn-border-color: #dc3545;
-    --mi-btn-hover-color: #fff;
-    --mi-btn-hover-bg: #bb2d3b;
-    --mi-btn-hover-border-color: #b02a37;
+    --bosch-btn-color: #dc3545;
+    --bosch-btn-border-color: #dc3545;
+    --bosch-btn-hover-color: #fff;
+    --bosch-btn-hover-bg: #bb2d3b;
+    --bosch-btn-hover-border-color: #b02a37;
   }
 }

@@ -1,12 +1,12 @@
 :root {
-  --bh-corporate-red: #a00;
-  --bh-corporate-yellow: #ff9100;
-  --bh-body-font-family: 'boschsans', helvetica, sans-serif;
-  --bh-body-font-weight: 300;
-  --bh-body-line-height: 1.4;
-  --bh-heading-font-family: 'boschsans', helvetica, sans-serif;
-  --bh-body-color: #000;
-  --bh-body-bg: #fff;
+  --bosch-corporate-red: var(--bosch-red-55);
+  --bosch-corporate-yellow: var(--bosch-yellow-80);
+  --bosch-font-family: 'boschsans', helvetica, sans-serif;
+  --bosch-body-font-weight: 400;
+  --bosch-body-line-height: 1.4;
+  --bosch-heading-font-family: var(--bosch-font-family);
+  --bosch-body-color: var(--bosch-black);
+  --bosch-body-bg: #fff;
   --bh-highlight-color: #000;
   --bh-highlight-bg: #ffd61e;
   --bh-mark-padding: 0.2rem 0.4rem;

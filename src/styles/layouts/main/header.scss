@@ -51,12 +51,6 @@
     flex-shrink: 0;
   }
 
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   &__brand {
     display: block;
     flex-shrink: 0;
@@ -68,7 +62,7 @@
       transition: all 0.25s;
 
       @media(width >= 992px) {
-        width: 164px;
+        width: 150px;
       }
     }
   }
@@ -77,10 +71,27 @@
     display: flex;
     align-items: center;
     column-gap: 40px;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     @media(width >= 1200px) {
       column-gap: 10px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #000;
+    transition: 0.4s;
+
+    &:hover {
+      color: var(--bosch-link-color)
+    }
+
+    span {
+      font-weight: var(--bosch-weight-bolder);
+      font-size: 14px;
     }
   }
 

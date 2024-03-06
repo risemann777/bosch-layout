@@ -1,0 +1,15 @@
+.location {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  color: #000;
+  transition: 0.4s;
+
+  &:hover {
+    color: var(--bosch-link-color)
+  }
+
+  &__name {
+    font-size: 14px;
+  }
+}

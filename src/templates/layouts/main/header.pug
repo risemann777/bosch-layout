@@ -10,27 +10,30 @@ header.header.page__header
           svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-close")
       a(href="#").header__buy.btn.btn--primary Где купить
 
-
-    .header__content
-      .header__controls
-        .header__navbar
-          nav.navbar
-            ul.navbar__list
-              li.navbar__item.navbar__item--dropdown
-                a(href="/products-and-services/").navbar__link Продукция и услуги
-                ul.navbar__dropdown
-                  li: a(href="/products-and-services--mobility/") Решения для мобильности
-                  li: a(href="/products-and-services--at-home/") Для дома
-                  li: a(href="/products-and-services--industry-and-trades/") Промышленность и торговля
-              li.navbar__item
-                a(href="/").navbar__link Новости и проекты
-              li.navbar__item.navbar__item--dropdown
-                a(href="/").navbar__link О компании
-                ul.navbar__dropdown
-                  li: a(href="/our-company--bosch-in-russia") Bosch в России
-                  li: a(href="/our-company--our-responsibility") Наша ответственность
-                  li: a(href="/our-company--our-history") Наша история
-                  li: a(href="/our-company--bosch-group-worldwide") Компания Bosch в мире
-              li.navbar__item
-                a(href="/").navbar__link Контакты
-        .header__buttons
+    .header__controls
+      a(href="#").header__location.location
+        svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-location")
+        .location__name Россия
+      .header__navbar
+        nav.navbar
+          ul.navbar__list
+            li.navbar__item.navbar__item--dropdown
+              a(href="/products-and-services/").navbar__link Продукция и услуги
+              ul.navbar__dropdown
+                li: a(href="/products-and-services--mobility/") Решения для мобильности
+                li: a(href="/products-and-services--at-home/") Для дома
+                li: a(href="/products-and-services--industry-and-trades/") Промышленность и торговля
+            li.navbar__item.navbar__item--dropdown
+              a(href="/").navbar__link О компании
+              ul.navbar__dropdown
+                li: a(href="/our-company--bosch-in-russia") Bosch в России
+                li: a(href="/our-company--our-responsibility") Наша ответственность
+                li: a(href="/our-company--our-history") Наша история
+                li: a(href="/our-company--bosch-group-worldwide") Компания Bosch в мире
+            li.navbar__item
+              a(href="/").navbar__link Новости и проекты
+            li.navbar__item
+              a(href="/").navbar__link Контакты
+      a(href="tel:88002000005").header__phone
+        svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-phone")
+        span 8 800 200 00 05

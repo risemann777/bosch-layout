@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: var(--bosch-weight-bolder);
   font-family: var(--bosch-heading-font-family);
 }
 
@@ -70,7 +70,7 @@ ul ol {
 }
 
 dt {
-  font-weight: var(--bh-dt-font-weight);
+  font-weight: var(--bosch-dt-font-weight);
 }
 
 // 1. Undo browser default
@@ -104,9 +104,9 @@ small {
 }
 
 mark {
-  padding: var(--bh-mark-padding);
-  color: var(--bh-highlight-color);
-  background-color: var(--bh-highlight-bg);
+  padding: var(--bosch-mark-padding);
+  color: var(--bosch-highlight-color);
+  background-color: var(--bosch-highlight-bg);
 }
 
 // Sub and Sup
@@ -128,11 +128,11 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: var(--bh-link-color);
+  color: var(--bosch-link-color);
   text-decoration: $link-decoration;
 
   &:hover {
-    color: var(var(--bh-link-hover-color));
+    color: var(var(--bosch-link-hover-color));
     text-decoration: $link-hover-decoration;
   }
 
@@ -312,10 +312,6 @@ legend {
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
-}
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 // Remove the inner padding in Chrome and Safari on macOS.

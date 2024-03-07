@@ -1,0 +1,11 @@
+.mobile-only {
+  @media(width >= 1024px) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @media(width <= 1023px) {
+    display: none;
+  }
+}

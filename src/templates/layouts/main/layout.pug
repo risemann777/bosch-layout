@@ -1,9 +1,8 @@
 include ../../mixins/headline
 
 - browserTitle = 'Bosch-layout | Главная';
-- headlineTitle = 'Главная headline'
-- headlineText = 'Дополнительный текст для headline'
-- pageTitle = 'Главная';
+- pageTitle = '';
+- headlineText = ''
 - pageClass = 'page--main';
 - isIndexPage = false;
 block vars
@@ -35,7 +34,7 @@ html(lang='en')
       main.page__main
         .page__container
           +headline({
-            title: headlineTitle,
+            title: pageTitle,
             text: headlineText
           })
 

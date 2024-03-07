@@ -1,8 +1,8 @@
 mixin headline(data)
   - title = data.title || null
   - text = data.text || null
-  .headline
+  .page__headline.headline
     if title
       h1.headline__title=data.title
     if text
-      p=text
+      .headline__text=text

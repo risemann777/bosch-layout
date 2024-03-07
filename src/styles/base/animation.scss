@@ -10,6 +10,40 @@
   }
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -20,4 +54,126 @@
     opacity: 1;
     transform: translateZ(0);
   }
+}
+
+.fadeInUp {
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+
+.del100,
+.d1 {
+  animation-delay: 100ms;
+}
+
+.del200,
+.d2 {
+  animation-delay: 200ms;
+}
+
+.del300,
+.d3 {
+  animation-delay: 300ms;
+}
+
+.del400,
+.d4 {
+  animation-delay: 400ms;
+}
+
+.del500,
+.d5 {
+  animation-delay: 500ms;
+}
+
+.del600,
+.d6 {
+  animation-delay: 600ms;
+}
+
+.del700,
+.d7 {
+  animation-delay: 700ms;
+}
+
+.del800,
+.d8 {
+  animation-delay: 800ms;
+}
+
+.del900,
+.d9 {
+  animation-delay: 900ms;
+}
+
+.del1000,
+.d10 {
+  animation-delay: 1000ms;
+}
+
+.dur100,
+.dr1 {
+  animation-duration: 100ms;
+}
+
+.dur200,
+.dr2 {
+  animation-duration: 200ms;
+}
+
+.dur300,
+.dr3 {
+  animation-duration: 300ms;
+}
+
+.dur400,
+.dr4 {
+  animation-duration: 400ms;
+}
+
+.dur500,
+.dr5 {
+  animation-duration: 500ms;
+}
+
+.dur600,
+.dr6 {
+  animation-duration: 600ms;
+}
+
+.dur700,
+.dr7 {
+  animation-duration: 700ms;
+}
+
+.dur800,
+.dr8 {
+  animation-duration: 800ms;
+}
+
+.dur900,
+.dr19 {
+  animation-duration: 900ms;
+}
+
+.dur1000,
+.dr10 {
+  animation-duration: 1000ms;
 }

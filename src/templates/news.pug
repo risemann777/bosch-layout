@@ -1,0 +1,53 @@
+extends layouts/main/layout
+include mixins/news
+
+block vars
+  - pageTitle = 'Новости'
+
+block content
+  +news({
+    items: [
+      {
+        id: 1,
+        date: "18 июля 2023",
+        title: "Топ 3 сплит-системы от Bosch 2023",
+        description: "Модельный ряд бытовых систем кондиционирования Bosch 2023",
+        image: "images/catalog/at-home_res_1280x720.webp"
+      },
+      {
+        id: 2,
+        date: "4 апреля 2023",
+        title: "Обновленный каталог Bosch 2023 года",
+        description: "Мы рады сообщить о выпуске обновленного каталога бытовых кондиционеров",
+        image: "images/catalog/home-appliances-range_res_1280x720.webp"
+      },
+      {
+        id: 3,
+        date: "23 ноября 2022",
+        title: "Стратегическая конференция Bosch Master!",
+        description: "24-28 октября в Турции прошла конференция Bosch Master",
+        image: "images/news/news_1.jpg"
+      },
+      {
+        id: 4,
+        date: "18 июля 2023",
+        title: "Новинка от Bosch - флагманская серия Climate Line 6000i",
+        description: "Новинка лидера рынка",
+        image: "images/news/news_2.jpg"
+      },
+      {
+        id: 5,
+        date: "4 апреля 2023",
+        title: "Обновленный каталог Bosch 2023 года",
+        description: "Мы рады сообщить о выпуске обновленного каталога бытовых кондиционеров",
+        image: "images/news/news_1.jpg"
+      },
+      {
+        id: 6,
+        date: "23 ноября 2022",
+        title: "Стратегическая конференция Bosch Master!",
+        description: "24-28 октября в Турции прошла конференция Bosch Master",
+        image: "images/news/news_1.jpg"
+      },
+    ]
+  })

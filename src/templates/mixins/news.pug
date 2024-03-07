@@ -1,0 +1,14 @@
+mixin news(data)
+  - items = data.items || null
+  .news
+    .news__list
+      if items
+        each item in items
+          .news__item
+            .news-card
+              a(href=`news-detail.html#${item.id}`).news-card__clickable
+              .news-card__bg: img(src=item.image)
+              .news-card__date=item.date
+              .news-card__info
+                .news-card__title=item.title
+                .news-card__description=item.description

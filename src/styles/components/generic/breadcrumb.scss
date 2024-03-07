@@ -1,21 +1,45 @@
 .breadcrumb {
-  margin: 20px 0;
-
-  &__list {
-    display: flex;
-  }
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
 
   &__item {
     white-space: nowrap;
-    line-height: 13px;
+    line-height: 1;
     vertical-align: middle;
     margin-right: 10px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 
     span {
       white-space: normal;
+      color: var(--bosch-gray-60);
+      padding: 4px 0;
     }
 
-    a {border-bottom: none;}
+    a {
+      border-bottom: none;
+      color: var(--bosch-black);
+      transition: 0.4s;
+      padding: 4px 0;
+
+      &:hover {
+        color: var(--bosch-link-color);
+      }
+    }
+
+    & + .breadcrumb {
+      &__item {
+        &::before {
+          content: "\203A";
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 12px 0 0;
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

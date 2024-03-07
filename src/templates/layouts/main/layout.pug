@@ -1,10 +1,13 @@
 include ../../mixins/headline
+include ../../mixins/breadcrumb
 
 - browserTitle = 'Bosch-layout | Главная';
 - pageTitle = '';
 - headlineText = ''
 - pageClass = 'page--main';
 - isIndexPage = false;
+- breadcrumbList = [];
+- showNavChain = true;
 block vars
 
 doctype html
@@ -33,11 +36,14 @@ html(lang='en')
 
       main.page__main
         .page__container
+          if showNavChain
+            +breadcrumb({
+              items: breadcrumbList
+            })
           +headline({
             title: pageTitle,
             text: headlineText
           })
-
           .page__content
             block content
 

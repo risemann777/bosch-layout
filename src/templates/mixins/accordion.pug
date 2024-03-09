@@ -1,0 +1,26 @@
+mixin accordion(data)
+  - items = data.items || null
+  - contentClass = data.contentClass || ''
+  .accordion
+    .accordion__list
+      if items
+        each item in items
+          .accordion__item
+            .accordion__head
+              .accordion__info
+                .accordion__name=item.name
+              .accordion__arrow
+            .accordion__body
+              .accordion__content(class=`${contentClass}`)
+                if (item.phone)
+                  div(class=`${contentClass}__item`)
+                    div(class=`${contentClass}__title`) Телефон:
+                    a(href=`tel:${item.phone.href}`)=item.phone.name
+                if (item.email)
+                  div(class=`${contentClass}__item`)
+                    div(class=`${contentClass}__title`) E-mail:
+                    a(href=`mailto:${item.email}`)=item.email
+                if (item.site)
+                  div(class=`${contentClass}__item`)
+                    div(class=`${contentClass}__title`) Сайт:
+                    a(href=`${item.site}`)=item.site

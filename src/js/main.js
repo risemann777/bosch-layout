@@ -1,11 +1,11 @@
-import example from "./modules/example.js"
 import Swiper from "swiper"
 import {Navigation, Pagination} from 'swiper/modules'
 import inputPhoneMask from "./modules/inputPhoneMask";
+import accordion from "./modules/accordion.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-  example()
   inputPhoneMask()
+  accordion()
 
   new Swiper('.product-section-slider', {
     modules: [Navigation, Pagination],

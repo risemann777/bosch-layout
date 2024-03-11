@@ -1,0 +1,93 @@
+.drawer {
+  z-index: 1000;
+  display: none;
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(53 52 51 / 50%);
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    background: #fff;
+    padding: 50px 30px;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+
+    @media(width >= 576px) {
+      width: 500px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__body {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: var(--bosch-weight-bolder);
+  }
+
+  &[aria-hidden="false"] {
+    .drawer {
+      &__overlay {
+        animation: fadeIn 0.5s both;
+      }
+
+      &__container {
+        animation: drawerShow 0.3s both;
+      }
+    }
+  }
+
+  &[aria-hidden="true"] {
+    .drawer {
+      &__overlay {
+        animation: fadeOut 0.5s both;
+      }
+
+      &__container {
+        animation: drawerHide 0.3s both;
+      }
+    }
+  }
+}
+
+.drawer-opened--countrySelect {
+  overflow: hidden;
+
+  #countrySelect {
+    display: block;
+  }
+}
+
+.bx-no-touch {
+  .drawer-opened--countrySelect {
+    padding-right: 17px;
+  }
+}

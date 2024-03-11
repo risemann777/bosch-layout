@@ -1,34 +1,39 @@
 export default function drawer() {
-  const toggleButtons = document.querySelectorAll('[data-toggle]')
-  const closeButtons = document.querySelectorAll('[data-close]')
+  const toggleButtons = document.querySelectorAll('[data-drawer-toggle]')
+  const closeNodes = document.querySelectorAll('[data-drawer-close]')
   const body = document.body
   const drawerDiscuss = document.querySelector('.drawer-discuss')
   const drawerForm = document.querySelector('.drawer-form')
 
   if (toggleButtons) {
     toggleButtons.forEach(button => {
+
       button.addEventListener('click', () => {
-        const target = button.dataset.toggle
+        const {drawerToggle} = button.dataset
 
-        if (target === 'drawer-discuss' && drawerDiscuss) {
-          body.classList.add('drawer-discuss-opened')
-        }
-
-        if (target === 'drawer-form' && drawerForm) {
-          body.classList.add('drawer-form-opened')
+        if (drawerToggle) {
+          const drawer = document.querySelector(`#${drawerToggle}`)
+          if (drawer) {
+            body.classList.add(`drawer-opened--${drawerToggle}`)
+            drawer.setAttribute('aria-hidden', 'false')
+          }
+          console.log(drawer)
         }
       })
     })
   }
 
-  if (closeButtons) {
-    closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const target = button.dataset.close
+  if (closeNodes) {
+    closeNodes.forEach((element) => {
+      element.addEventListener('click', (e) => {
+        const drawer = element.closest(`.drawer`)
+        const id = drawer.getAttribute('id')
+        drawer.setAttribute('aria-hidden', 'true')
 
-        if (target === 'drawer-close') {
-          body.classList.remove('drawer-discuss-opened')
-          body.classList.remove('drawer-form-opened')
+        if (body.classList.contains(`drawer-opened--${id}`)) {
+          setTimeout(() => {
+            body.classList.remove(`drawer-opened--${id}`)
+          }, 500)
         }
       })
     })

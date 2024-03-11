@@ -1,4 +1,4 @@
-import isMobile from "./is-mobile";
+import isMobile from "../lib/is-mobile.js";
 export default function animation() {
   const body = document.body;
   let lastScrollPosition = 0

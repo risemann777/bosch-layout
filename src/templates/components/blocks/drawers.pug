@@ -1,0 +1,14 @@
+.drawer#countrySelect(aria-hidden="true")
+  .drawer__overlay(data-drawer-close='true')
+  .drawer__container
+    .drawer__close.btn-close(data-drawer-close='true')
+    .drawer__content
+      .drawer__header
+        .drawer__title Выбор страны
+      .drawer__body
+        .country-select
+          ul.country-select__list
+            li.country-select__item
+              span.country-select__link.country-select__link--current(data-id="ru") Россия
+            li.country-select__item
+              span.country-select__link(data-id="by") Беларусь

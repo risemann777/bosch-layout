@@ -1,12 +1,18 @@
-import Swiper from "swiper"
+import Swiper from 'swiper'
 import {Navigation, Pagination} from 'swiper/modules'
-import {Fancybox} from "@fancyapps/ui"
-import inputPhoneMask from "./modules/inputPhoneMask"
-import accordion from "./modules/accordion.js"
+import {Fancybox} from '@fancyapps/ui'
+import setDeviceClass from './lib/set-device-class.js'
+import inputPhoneMask from './modules/inputPhoneMask'
+import accordion from './modules/accordion.js'
+import drawer from './modules/drawer.js'
+import countrySelect from './modules/country-select.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+  setDeviceClass()
   inputPhoneMask()
   accordion()
+  drawer()
+  countrySelect()
 
   new Swiper('.product-section-slider', {
     modules: [Navigation, Pagination],

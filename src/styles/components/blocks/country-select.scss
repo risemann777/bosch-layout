@@ -1,0 +1,32 @@
+.country-select {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding-top: 1rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    cursor: pointer;
+    line-height: 1.4;
+    color: var(--bosch-gray-30);
+
+    &:hover {
+      &:not(.country-select__link--current) {
+        color: var(--bosch-gray-10);
+      }
+    }
+
+    &--current {
+      font-weight: var(--bosch-weight-bolder);
+    }
+  }
+}

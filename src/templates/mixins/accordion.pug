@@ -1,6 +1,7 @@
 mixin accordion(data)
   - items = data.items || null
   - contentClass = data.contentClass || ''
+  - type = data.type || ''
   .accordion
     .accordion__list
       if items
@@ -12,15 +13,19 @@ mixin accordion(data)
               .accordion__arrow
             .accordion__body
               .accordion__content(class=`${contentClass}`)
-                if (item.phone)
-                  div(class=`${contentClass}__item`)
-                    div(class=`${contentClass}__title`) Телефон:
-                    a(href=`tel:${item.phone.href}`)=item.phone.name
-                if (item.email)
-                  div(class=`${contentClass}__item`)
-                    div(class=`${contentClass}__title`) E-mail:
-                    a(href=`mailto:${item.email}`)=item.email
-                if (item.site)
-                  div(class=`${contentClass}__item`)
-                    div(class=`${contentClass}__title`) Сайт:
-                    a(href=`${item.site}`)=item.site
+                if (type === 'contact')
+                  if (item.phone)
+                    div(class=`${contentClass}__item`)
+                      div(class=`${contentClass}__label`) Телефон:
+                      div(class=`${contentClass}__value`)
+                        a(href=`tel:${item.phone.href}`)=item.phone.name
+                  if (item.email)
+                    div(class=`${contentClass}__item`)
+                      div(class=`${contentClass}__label`) E-mail:
+                      div(class=`${contentClass}__value`)
+                        a(href=`mailto:${item.email}`)=item.email
+                  if (item.site)
+                    div(class=`${contentClass}__item`)
+                      div(class=`${contentClass}__label`) Сайт:
+                      div(class=`${contentClass}__value`)
+                        a(href=`${item.site}`)=item.site

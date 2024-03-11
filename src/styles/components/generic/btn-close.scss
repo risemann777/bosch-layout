@@ -1,0 +1,28 @@
+.btn-close {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1;
+  flex-shrink: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 1.5rem;
+    left: 5px;
+    top: 17px;
+    background-color: var(--bosch-gray-30);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

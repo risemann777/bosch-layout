@@ -1,15 +1,19 @@
 .location {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-  color: #000;
-  transition: 0.4s;
+  position: relative;
 
-  &:hover {
-    color: var(--bosch-link-color)
-  }
+  &__country {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #000;
+    transition: 0.4s;
 
-  &__name {
-    font-size: 14px;
+    &:hover {
+      color: var(--bosch-link-color)
+    }
+
+    &-name {
+      font-size: 14px;
+    }
   }
 }

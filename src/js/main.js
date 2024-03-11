@@ -1,7 +1,8 @@
 import Swiper from "swiper"
 import {Navigation, Pagination} from 'swiper/modules'
-import inputPhoneMask from "./modules/inputPhoneMask";
-import accordion from "./modules/accordion.js";
+import {Fancybox} from "@fancyapps/ui"
+import inputPhoneMask from "./modules/inputPhoneMask"
+import accordion from "./modules/accordion.js"
 
 document.addEventListener('DOMContentLoaded', () => {
   inputPhoneMask()

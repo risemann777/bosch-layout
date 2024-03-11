@@ -1,14 +1,31 @@
 .headline {
   display: flex;
-  gap: 20px 30px;
-  align-items: flex-end;
-  justify-content: space-between;
+  gap: 10px 30px;
+  flex-direction: column;
+
+  @media(width >= 576px) {
+    gap: 20px 30px;
+  }
+
+  @media(width >= 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
   &__title {
-    font-size: 48px;
+    font-size: 30px;
     margin: 0;
-    max-width: 60%;
     line-height: 1.1;
+
+    @media(width >= 576px) {
+      font-size: 40px;
+    }
+
+    @media(width >= 1024px) {
+      font-size: 48px;
+      max-width: 60%;
+    }
 
     @media(width >= 1400px) {
       font-size: 64px;
@@ -16,10 +33,17 @@
   }
 
   &__text {
-    font-size: 20px;
-    margin-bottom: 8px;
-    text-align: right;
-    max-width: 40%;
+    font-size: 16px;
+
+    @media(width >= 576px) {
+      font-size: 20px;
+    }
+
+    @media(width >= 1024px) {
+      text-align: right;
+      margin-bottom: 8px;
+      max-width: 40%;
+    }
 
     @media(width >= 1400px) {
       font-size: 24px;

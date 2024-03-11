@@ -11,9 +11,12 @@ header.header.page__header
       a(href="#").btn.btn--primary.header__buy Где купить
 
     .header__controls
-      a(href="#").header__location.location
-        svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-location")
-        .location__name Россия
+      .header__location.location
+        a(href="#").location__country
+          svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-location")
+          .location__country-name Россия
+        include ../../components/blocks/location-popup
+
       .header__navbar
         nav.navbar
           ul.navbar__list

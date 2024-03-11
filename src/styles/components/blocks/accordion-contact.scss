@@ -1,14 +1,10 @@
 .accordion-contact {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex-wrap: wrap;
 
   &__item {
     display: flex;
     column-gap: 6px;
-  }
-
-  &__title {
-    font-weight: var(--bosch-weight-bolder);
   }
 }

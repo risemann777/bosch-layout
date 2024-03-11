@@ -3,7 +3,7 @@
 .btn {
   --bosch-btn-bg: transparent;
   --bosch-btn-padding-y: 0.9rem;
-  --bosch-btn-padding-x: 1.6rem;
+  --bosch-btn-padding-x: 1.2rem;
   --bosch-btn-lg-padding-y: 16px;
   --bosch-btn-lg-padding-x: 30px;
   --bosch-btn-border-radius: 0;
@@ -29,6 +29,7 @@
   line-height: 1.4;
   column-gap: 10px;
   color: var(--bosch-btn-color);
+  white-space: nowrap;
 
   &:hover {
     background: var(--bosch-btn-hover-bg);
@@ -70,11 +71,20 @@
   }
 
   &--outline-primary {
-    --bosch-btn-color: #0d6efd;
-    --bosch-btn-border-color: #0d6efd;
+    --bosch-btn-color: var(--bosch-blue-50);
+    --bosch-btn-border-color: var(--bosch-blue-50);
     --bosch-btn-hover-color: #fff;
-    --bosch-btn-hover-bg: #0b5ed7;
-    --bosch-btn-hover-border-color: #0a58ca;
+    --bosch-btn-hover-bg: var(--bosch-blue-50);
+    --bosch-btn-hover-border-color: var(--bosch-blue-50);
+  }
+
+  &--secondary {
+    --bosch-btn-color: var(--bosch-gray-30);
+    --bosch-btn-bg: var(--bosch-gray-95);
+    --bosch-btn-border-color: var(--bosch-gray-90);
+    --bosch-btn-hover-color: var(--bosch-gray-30);
+    --bosch-btn-hover-bg: var(--bosch-gray-90);
+    --bosch-btn-hover-border-color: var(--bosch-gray-90);
   }
 
   &--success {

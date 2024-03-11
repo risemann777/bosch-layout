@@ -1,0 +1,38 @@
+.location-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 340px;
+  padding-top: 18px;
+  z-index: 10;
+
+  &__wrapper {
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgb(21 21 21 / 15%);
+  }
+
+  &__header {
+    margin: 0 0 20px;
+  }
+
+  &__country {
+    font-weight: var(--bosch-weight-bolder);
+    font-size: 22px;
+    margin: 0 0 5px;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn {
+    flex-grow: 1;
+  }
+}

@@ -1,6 +1,5 @@
 import Swiper from 'swiper'
 import {Navigation, Pagination} from 'swiper/modules'
-import {Fancybox} from '@fancyapps/ui'
 import setDeviceClass from './lib/set-device-class.js'
 import inputPhoneMask from './modules/inputPhoneMask'
 import accordion from './modules/accordion.js'

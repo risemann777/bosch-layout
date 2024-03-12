@@ -18,11 +18,14 @@ const location = () => {
 
   const updatePopupVisibility = () => {
     if (cookieExists(cookieName)) {
-      console.log(`cookie exists = ${cookieName}`)
-      locationPopup.classList.add('location-popup--hidden')
-      mobileLocationPopup.classList.add('mobile-location-popup--hidden')
-    } else {
-      console.log(`cookie: ${cookieName} - is not set yet`)
+
+      if (locationPopup) {
+        locationPopup.classList.add('location-popup--hidden')
+      }
+
+      if (mobileLocationPopup) {
+        mobileLocationPopup.classList.add('mobile-location-popup--hidden')
+      }
     }
   }
 
@@ -51,7 +54,6 @@ const location = () => {
     locationApplyNodes.forEach((locationApplyElem) => {
       locationApplyElem.addEventListener('click', () => {
         if (!cookieExists(cookieName)) {
-          console.log(`set cookie = ${cookieName}`)
           setCookie(cookieOptions)
         }
         updatePopupVisibility()

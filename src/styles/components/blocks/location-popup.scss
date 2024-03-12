@@ -35,4 +35,16 @@
   &__btn {
     flex-grow: 1;
   }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.page {
+  &--loaded {
+    .location-popup {
+      animation: fadeInUp 0.3s 1s both;
+    }
+  }
 }

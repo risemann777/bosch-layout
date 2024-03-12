@@ -62,4 +62,16 @@
     right: 10px;
     top: 10px;
   }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.page {
+  &--loaded {
+    .mobile-location-popup {
+      animation: fadeInUp 0.3s 1s both;
+    }
+  }
 }

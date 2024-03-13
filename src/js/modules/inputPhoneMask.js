@@ -1,7 +1,7 @@
 import Inputmask from "inputmask/lib/inputmask";
 
 export default function inputPhoneMask() {
-  const im = new Inputmask("+7 (999) 999-9999", {
+  const im = new Inputmask("+7 (999) 999-99-99", {
     showMaskOnHover: false
   })
   const phoneInputs = document.querySelectorAll('input[name="phone"]')

@@ -1,0 +1,33 @@
+.footer-menu {
+  flex-shrink: 0;
+  min-width: 25%;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    @media(width >= 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+
+    @media(width >= 1200px) {
+      max-width: 50%;
+      flex: 0 0 50%;
+      padding: 0 10px;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    color: inherit;
+    transition: 0.25s;
+    padding: 0.5rem 0;
+    font-size: 16px;
+  }
+}

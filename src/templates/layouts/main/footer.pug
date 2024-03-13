@@ -1,3 +1,40 @@
 footer.footer.page__footer
   .footer__container
     .footer__content
+      .footer__main
+        .footer__aside
+          a(href="/").footer__brand: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
+          .footer__phone
+            a(href="tel:+7 (495) 560-9-560").footer__phone-number +7 (495) 560-9-560
+            .footer__phone-label Служба поддержки
+          .footer__feedback(data-drawer-toggle="feedbackDrawer")
+            svg(class="svg-icon" viewBox="0 0 24 24" width="24" height="24"): use(xlink:href="#svg-comment")
+            span Обратная связь
+        .footer__navbar
+          .footer-menu
+            ul.footer-menu__list
+              li.footer-menu__item
+                a(href="support.html").footer-menu__link Поддержка
+              li.footer-menu__item
+                a(href="our-company.html").footer-menu__link О компании
+              li.footer-menu__item
+                a(href="contacts.html").footer-menu__link Контакты
+              li.footer-menu__item
+                a(href="news.html").footer-menu__link Новости
+          .footer-catalog
+            .footer-catalog__title: a(href="catalog.html") Каталог
+            .footer-catalog__list
+              .footer-catalog__item
+                a(href="#").footer-catalog__link Электроинструменты
+              .footer-catalog__item
+                a(href="#").footer-catalog__link Бытовая техника
+              .footer-catalog__item
+                a(href="#").footer-catalog__link Автомобильные запчасти и оборудование
+              .footer-catalog__item
+                a(href="#").footer-catalog__link Системы отопления
+
+      .footer__bottom
+        .footer__copyright <span>&copy; 2024 Роберт Бош ООО,</span> <span>все права защищены</span>
+        .footer__links
+          a(href="#") Политика конфиденциальности
+          a(href="#") Пользовательское соглашение

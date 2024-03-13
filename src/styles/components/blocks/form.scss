@@ -2,37 +2,41 @@
 
 .form {
   &__field {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
+
+    @media(width >= 576px) {
+      margin: 0 0 20px;
+    }
   }
 
   &__control {
     display: block;
     position: relative;
     width: 100%;
-    padding: 22px 24px 18px;
-    font-size: 18px;
+    padding: 10px 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     appearance: none;
-    background-color: transparent;
-    border: 1px solid rgb(255 255 255 / 20%);
-    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid var(--bosch-input-border-color);
+    border-radius: 0;
     background-clip: padding-box;
-    transition: border-color 0.2s;
-    color: #fff;
+    transition: border-color 0.25s;
+    color: #000;
 
-    @media(width >= 992px) {
-      padding: 24px 24px 22px 20px;
-      font-size: 24px;
+    @media(width >= 576px) {
+      padding: 12px 16px;
+      font-size: 16px;
     }
 
     &:focus {
       outline: 0;
-      border: 1px solid rgb(255 255 255 / 50%);
+      border: 1px solid var(--bosch-input-border-focus-color);
     }
 
     &:hover {
-      border: 1px solid rgb(255 255 255 / 50%);
+      border: 1px solid var(--bosch-input-border-hover-color);
     }
 
     option {
@@ -50,21 +54,13 @@
   }
 
   &__label {
-    position: absolute;
-    font-size: 16px;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 14px;
     font-weight: 400;
-    color: #fff;
-    transition: 0.25s ease-out;
-    cursor: default;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.5;
+    color: var(--bosch-gray-60);
+    margin: 0 0 2px;
 
     @media(width >= 992px) {
-      font-size: 24px;
+      font-size: 16px;
     }
   }
 
@@ -87,6 +83,11 @@
   &__input {
     position: relative;
 
+    &-required {
+      color: var(--bosch-red-50);
+      margin: 0 0 0 5px;
+    }
+
     &--textarea {
       .form {
         &__label {
@@ -95,7 +96,7 @@
         }
 
         &__control {
-          min-height: 200px;
+          min-height: 150px;
         }
       }
     }

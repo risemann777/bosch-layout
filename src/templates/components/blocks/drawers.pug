@@ -1,3 +1,5 @@
+include ../../mixins/checkbox
+
 .drawer#countrySelect(aria-hidden="true")
   .drawer__overlay(data-drawer-close='true')
   .drawer__container
@@ -12,3 +14,44 @@
               span.country-select__link.country-select__link--current(data-id="ru") Россия
             li.country-select__item
               span.country-select__link(data-id="by") Беларусь
+
+.drawer#feedbackDrawer(aria-hidden="true")
+  .drawer__overlay(data-drawer-close='true')
+  .drawer__container
+    .drawer__close.btn-close(data-drawer-close='true')
+    .drawer__content
+      .drawer__header
+        .drawer__title Обратная связь
+        .drawer__subtitle Оставьте ваши контактные данные, и наш специалист свяжется с вами
+      .drawer__body
+        form.form.form--feedback
+          .form__container
+            .form__field
+              .form__input
+                label.form__label
+                  | Имя
+                  span.form__input-required *
+                input(type="text").form__control
+            .form__field
+              .form__input
+                label.form__label Фамилия
+                input(type="text").form__control
+            .form__field
+              .form__input
+                label.form__label E-mail
+                input(type="text").form__control
+            .form__field
+              .form__input
+                label.form__label Город
+                input(type="text").form__control
+            .form__field
+              .form__input
+                label.form__label Телефон
+                input(type="text" name="phone").form__control
+            .form__field
+              .form__input--textarea
+                label.form__label Комментарий
+                textarea.form__control
+          .form__bottom
+            +checkbox({text: ""})
+            input(type="submit").btn.btn--primary

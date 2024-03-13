@@ -2,8 +2,6 @@ export default function drawer() {
   const toggleButtons = document.querySelectorAll('[data-drawer-toggle]')
   const closeNodes = document.querySelectorAll('[data-drawer-close]')
   const body = document.body
-  const drawerDiscuss = document.querySelector('.drawer-discuss')
-  const drawerForm = document.querySelector('.drawer-form')
 
   if (toggleButtons) {
     toggleButtons.forEach(button => {
@@ -14,7 +12,7 @@ export default function drawer() {
         if (drawerToggle) {
           const drawer = document.querySelector(`#${drawerToggle}`)
           if (drawer) {
-            body.classList.add(`drawer-opened--${drawerToggle}`)
+            body.classList.add(`opened--${drawerToggle}`)
             drawer.setAttribute('aria-hidden', 'false')
           }
           console.log(drawer)
@@ -30,9 +28,9 @@ export default function drawer() {
         const id = drawer.getAttribute('id')
         drawer.setAttribute('aria-hidden', 'true')
 
-        if (body.classList.contains(`drawer-opened--${id}`)) {
+        if (body.classList.contains(`opened--${id}`)) {
           setTimeout(() => {
-            body.classList.remove(`drawer-opened--${id}`)
+            body.classList.remove(`opened--${id}`)
           }, 500)
         }
       })

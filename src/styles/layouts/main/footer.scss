@@ -1,43 +1,139 @@
 .footer {
-  position: relative;
-  background: #a9a9a9;
+  border-top: 1px solid var(--bosch-gray-90);
 
   &__container {
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 
-    @media(width >= 992px) {
+    @media(width >= 1024px) {
       padding-left: 32px;
       padding-right: 32px;
     }
   }
 
   &__content {
-    padding: 20px 0;
+    padding: 50px 0 20px;
     display: flex;
     justify-content: space-between;
-    gap: 10px 30px;
+    row-gap: 70px;
+    flex-direction: column;
+  }
+
+  &__main {
+    display: flex;
+    gap: 40px 10%;
+    justify-content: space-between;
     flex-direction: column;
 
-    @media(width >= 576px) {
+    @media(width >= 640px) {
       flex-direction: row;
     }
+  }
 
-    a {
-      color: inherit;
+  &__aside {
+    flex-shrink: 0;
+    display: grid;
+    gap: 25px 25px;
+    justify-content: space-between;
+
+    @media(width >= 420px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
+    @media(width >= 640px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: initial;
+      gap: 25px;
     }
+  }
+
+  &__navbar {
+    @media(width >= 480px) {
+      display: flex;
+      gap: 20px 40px;
+    }
+
+    @media(width >= 576px) {
+      flex: 1 1 auto;
+    }
+
+    @media(width >= 992px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__brand {
+    display: block;
+    flex-shrink: 0;
+    text-decoration: none;
+
+    @media(width >= 640px) {
+      padding-top: 0.5rem;
+    }
+
+    .svg-icon {
+      width: 115px;
+      height: auto;
+      transition: all 0.25s;
+    }
+  }
+
+  &__phone {
+    &-number {
+      font-size: 16px;
+    }
+
+    &-label {
+      font-size: 12px;
+      margin-top: 5px;
+      color: var(--bosch-gray-70);
+    }
+  }
+
+  &__feedback {
+    font-size: 14px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  &__copyright {
+    font-size: 12px;
 
     span {
       white-space: nowrap;
+    }
+  }
+
+  &__links {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+
+    a {
+      color: inherit;
+      transition: 0.25s;
+
+      &:hover {
+        color: var(--bosch-link-hover-color);
+      }
     }
   }
 }

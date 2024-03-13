@@ -132,7 +132,7 @@ a {
   text-decoration: $link-decoration;
 
   &:hover {
-    color: var(var(--bosch-link-hover-color));
+    color: var(--bosch-link-hover-color);
     text-decoration: $link-hover-decoration;
   }
 

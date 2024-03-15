@@ -1,4 +1,4 @@
-.section-slide {
+.main-slide {
   &__bg {
     position: relative;
     padding-top: 100%;
@@ -92,12 +92,17 @@
   }
 }
 
-.section-slider {
+.main-slider {
   flex-shrink: 0;
   margin: 0 -16px;
+  padding-bottom: 40px;
 
   @media(width >= 768px) {
     margin: 0;
+  }
+
+  @media(width >= 1024px) {
+    padding-bottom: 90px;
   }
 
   .swiper-wrapper {

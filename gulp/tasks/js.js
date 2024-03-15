@@ -14,7 +14,8 @@ const jsTask = () => {
       {
         mode: env,
         entry: {
-          main: './src/js/main.js'
+          main: './src/js/main.js',
+          plugins: './src/js/plugins.js'
         },
         output: {
           filename: '[name].bundle.js',

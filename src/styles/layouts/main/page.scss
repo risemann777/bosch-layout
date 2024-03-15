@@ -47,11 +47,6 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
-
-    @media(width >= 1024px) {
-      row-gap: 120px;
-    }
   }
 
   &.menu-opened {

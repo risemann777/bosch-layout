@@ -7,19 +7,20 @@ block vars
   - showNavChain = false
 
 block content
-  include components/blocks/product-section-slider
-  .section
+  include components/blocks/section-slider
+  .section.section--about
     .section__aside
       .section__title.desktop-only Bosch &mdash; разработано для жизни
-      a(href="#").btn.btn--primary.desktop-only О бренде
+      a(href="#").btn.btn--primary.desktop-only О компании
     .section__content
-      .section__img: img(src="images/static/people.jpg")
-      .section__title.mobile-only Bosch &mdash; разработано для жизни
-      .section__subtitle Группа компаний Bosch является ведущим мировым поставщиком технологий и услуг
+      .section__title.mobile-only Группа компаний Bosch является ведущим мировым поставщиком технологий и услуг
+      .section__subtitle.desktop-only Группа компаний Bosch является ведущим мировым поставщиком технологий и услуг
       .section__text
         p Стратегической целью Bosch является улучшение качества жизни людей во всем мире с помощью инновационных продуктов и услуг. Компания создает технологии, которые «разработаны для жизни».
+      .section__picture: img(src="images/static/build.jpg")
+      .section__text
         p История Bosch началась в 1886 г. с основания Робертом Бошем «Мастерской точной механики и электротехники» в городе Штутгарт. Это было рождение компании, работающей сегодня по всему миру: 440 дочерних и региональных компаний, совместно с Robert Bosch GmbH, объединены в составе группы Bosch в более чем 60 странах и регионах. Глобальная сеть, объединившая партнеров компании по продажам и обслуживанию в 150 странах, сформировала прочную основу для дальнейшего развития компании.
-      a(href="#").btn.btn--primary.mobile-only О бренде
+      a(href="/our-company/").btn.btn--primary.mobile-only О компании
 
   .section.section--support
     .section__aside

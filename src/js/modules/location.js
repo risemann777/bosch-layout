@@ -8,6 +8,8 @@ const location = () => {
   const params = new URLSearchParams(parsedURL.search)
   const cookieName = 'countrySelected'
 
+  console.log(parsedURL)
+
   const cookieOptions = {
     name: cookieName,
     value: 'true',
@@ -44,7 +46,7 @@ const location = () => {
             setCookie(cookieOptions)
           }
 
-          window.location.href = `${parsedURL.origin}/?${params.toString()}`
+          window.location.href = `${parsedURL.origin}/?country_id=${id}`
         })
       })
     }

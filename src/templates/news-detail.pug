@@ -1,7 +1,15 @@
 extends layouts/main/layout
 
 block vars
-  - pageTitle = 'Заголовок новости'
-  - breadcrumbList = [{name: "Новости", link: "news.html"}, {name: "Заголовок новости"}];
+  - pageTitle = 'Bosch дает добро на массовое производство чипов из карбида кремния'
+  - headlineText = 'Разработано для жизни и еще очень много текста'
+  - breadcrumbList = [{name: "Новости", link: "news.html"}, {name: "Bosch дает добро на массовое производство чипов из карбида кремния"}];
 
 block content
+  .news-detail
+    .news-detail__picture: img(src="images/news/bosch_sic_wafer_2-standard_res_1600x900.webp")
+    .news-detail__date 02.12.2021
+    .news-detail__back
+      a.news-detail__back-link(href="news.html")
+        svg(class="svg-icon" viewBox="0 0 1024 1024" width="18" height="18"): use(xlink:href="#svg-arrow-left")
+        span Возврат к списку

@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
 
-  &__list {
+  ul {
     list-style: none;
+  }
+
+  &__list {
     padding: 0;
     margin: 0;
     display: flex;
@@ -15,6 +18,14 @@
     align-items: center;
     padding: 1rem 0.75em;
     color: inherit;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+
+    &--root {
+      transition: 0.25s;
+    }
   }
 
   &__dropdown {
@@ -43,7 +54,8 @@
     }
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
       color: #000;
       font-size: 14px;
       width: 100%;
@@ -52,11 +64,40 @@
       white-space: nowrap;
       background-color: transparent;
       transition: 0.1s;
+      column-gap: 10px;
+      justify-content: space-between;
 
       &:hover {
         color: #000;
         background-color: #e9ecef;
         border-radius: 0.3rem;
+      }
+    }
+
+    &-item {
+      &--parent {
+        position: relative;
+        display: flex;
+
+        ul {
+          position: absolute;
+          top: -8px;
+          left: 100%;
+          background: #fff;
+          box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+          padding: 8px;
+          border-radius: 0.5rem;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &:hover {
+          ul {
+            opacity: 1;
+            pointer-events: initial;
+            animation: fadeInLeft 0.2s ease;
+          }
+        }
       }
     }
   }
@@ -67,12 +108,6 @@
 
       .navbar__link {
         column-gap: 10px;
-
-        &::after {
-          content: "\203A";
-          font-size: 22px;
-          transform: rotate(90deg);
-        }
       }
 
       &:hover {
@@ -80,7 +115,13 @@
           &__dropdown {
             opacity: 1;
             pointer-events: initial;
-            animation: fadeInUp .2s ease;
+            animation: fadeInUp 0.2s ease;
+          }
+
+          &__arrow {
+            &--root {
+              transform: rotate(-180deg);
+            }
           }
         }
       }

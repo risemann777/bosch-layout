@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   accordion()
   drawer()
 
-  new Swiper('.product-section-slider', {
+  new Swiper('.section-slider', {
     modules: [Navigation, Pagination],
     navigation: {
       nextEl: '.swiper-button-next',

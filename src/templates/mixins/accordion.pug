@@ -10,7 +10,7 @@ mixin accordion(data)
             .accordion__head
               .accordion__info
                 .accordion__name=item.name
-              .accordion__arrow
+              svg(class="svg-icon accordion__arrow" viewBox="0 0 1024 1024" width="16" height="16"): use(xlink:href="#svg-arrow-down")
             .accordion__body
               .accordion__content(class=`${contentClass}`)
                 if (type === 'contact')

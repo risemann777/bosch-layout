@@ -5,7 +5,7 @@
     margin: 0 0 10px;
 
     @media(width >= 576px) {
-      margin: 0 0 20px;
+      margin: 0 0 12px;
     }
   }
 
@@ -14,8 +14,8 @@
     position: relative;
     width: 100%;
     padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: var(--bosch-weight-light);
     line-height: 1.5;
     appearance: none;
     background-color: #fff;
@@ -27,7 +27,7 @@
 
     @media(width >= 576px) {
       padding: 12px 16px;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     &:focus {
@@ -55,9 +55,9 @@
 
   &__label {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: var(--bosch-weight-light);
     color: var(--bosch-gray-60);
-    margin: 0 0 2px;
+    margin: 0;
 
     @media(width >= 992px) {
       font-size: 16px;
@@ -92,11 +92,10 @@
       .form {
         &__label {
           top: 30px;
-          font-weight: 400;
         }
 
         &__control {
-          min-height: 150px;
+          min-height: 120px;
         }
       }
     }

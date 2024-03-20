@@ -11,13 +11,16 @@
     margin: 0;
     display: flex;
     align-items: center;
+    column-gap: 20px;
   }
 
   &__link {
     display: flex;
     align-items: center;
-    padding: 1rem 0.75em;
-    color: inherit;
+    padding: 1.2rem 0;
+    color: var(--bosch-gray-30);
+    font-weight: var(--bosch-weight-light);
+    font-size: 18px;
   }
 
   &__arrow {
@@ -57,7 +60,7 @@
       display: flex;
       align-items: center;
       color: #000;
-      font-size: 14px;
+      font-size: 16px;
       width: 100%;
       padding: 8px 14px;
       text-decoration: none;
@@ -66,6 +69,7 @@
       transition: 0.1s;
       column-gap: 10px;
       justify-content: space-between;
+      font-weight: var(--bosch-weight-light);
 
       &:hover {
         color: #000;
@@ -107,7 +111,7 @@
       position: relative;
 
       .navbar__link {
-        column-gap: 10px;
+        column-gap: 7px;
       }
 
       &:hover {

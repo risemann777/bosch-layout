@@ -92,18 +92,19 @@
     }
 
     &-label {
-      font-size: 12px;
-      margin-top: 5px;
+      font-size: 14px;
       color: var(--bosch-gray-70);
+      font-weight: var(--bosch-weight-light);
     }
   }
 
   &__feedback {
     font-size: 14px;
     display: flex;
-    column-gap: 10px;
+    column-gap: 5px;
     align-items: center;
     cursor: pointer;
+    font-weight: var(--bosch-weight-light);
   }
 
   &__bottom {
@@ -114,7 +115,8 @@
   }
 
   &__copyright {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: var(--bosch-weight-light);
 
     span {
       white-space: nowrap;
@@ -122,10 +124,11 @@
   }
 
   &__links {
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px 15px;
+    font-weight: var(--bosch-weight-light);
 
     a {
       color: inherit;

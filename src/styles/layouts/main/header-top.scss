@@ -1,0 +1,69 @@
+.header-top {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: 0 10px 18px rgb(70 119 189 / 7%);
+
+  @media(width >= 1024px) {
+    position: static;
+    box-shadow: none;
+  }
+
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1320px;
+
+    @media(width >= 1024px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 25px 0 15px;
+    justify-content: space-between;
+
+    @media(width >= 1024px) {
+      padding: 30px 0 0;
+    }
+  }
+
+  &__brand {
+    display: block;
+    flex-shrink: 0;
+    text-decoration: none;
+
+    .svg-icon {
+      width: 115px;
+      height: auto;
+      transition: all 0.25s;
+
+      @media(width >= 1024px) {
+        width: 150px;
+      }
+    }
+  }
+
+  &__slogan {
+    display: none;
+
+    @media(width >= 1024px) {
+      font-weight: var(--bosch-weight-light);
+      font-size: 28px;
+      display: block;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    column-gap: 10px;
+  }
+}

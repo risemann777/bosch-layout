@@ -27,7 +27,7 @@
 
     @media(width >= 576px) {
       width: 500px;
-      padding: 50px 30px;
+      padding: 45px 30px;
     }
   }
 
@@ -55,12 +55,18 @@
   }
 
   &__title {
-    font-size: 26px;
-    font-weight: var(--bosch-weight-bolder);
+    font-size: 28px;
+    font-weight: var(--bosch-weight-light);
 
     @media(width >= 1024px) {
-      font-size: 30px;
+      font-size: 36px;
     }
+  }
+
+  &__subtitle {
+    font-weight: var(--bosch-weight-light);
+    font-size: 16px;
+    color: var(--bosch-gray-30);
   }
 
   &[aria-hidden="false"] {

@@ -3,7 +3,7 @@
 
   &__title {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: var(--bosch-weight-light);
 
     a {
       color: inherit;
@@ -39,5 +39,6 @@
     transition: 0.25s;
     padding: 0.4rem 0;
     font-size: 14px;
+    font-weight: var(--bosch-weight-light);
   }
 }

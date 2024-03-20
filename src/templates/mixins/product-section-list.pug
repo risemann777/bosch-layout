@@ -1,0 +1,17 @@
+mixin product-section-list(data)
+  - items = data.items || null
+  .product-section
+    .product-section__list
+      if items
+        each item in items
+          - picture = item.picture || null
+          - name = item.name || null
+          - description = item.description || null
+          .product-section__item
+            .product-section__item-picture
+              img(src=picture)
+              a(href="#").product-section__item-clickable
+            .product-section__item-info
+              .product-section__item-name=name
+              .product-section__item-description=description
+              a(href="#").btn.btn--primary.product-section__item-btn Подробнее

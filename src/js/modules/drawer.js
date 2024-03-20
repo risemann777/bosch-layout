@@ -15,7 +15,6 @@ export default function drawer() {
             body.classList.add(`opened--${drawerToggle}`)
             drawer.setAttribute('aria-hidden', 'false')
           }
-          console.log(drawer)
         }
       })
     })

@@ -1,11 +1,11 @@
-import setDeviceClass from './lib/set-device-class.js'
 import inputPhoneMask from './modules/inputPhoneMask'
 import accordion from './modules/accordion.js'
 import drawer from './modules/drawer.js'
 import location from './modules/location.js'
+import animation from './modules/animation.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  setDeviceClass()
+  animation()
   location()
   inputPhoneMask()
   accordion()

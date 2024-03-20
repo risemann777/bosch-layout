@@ -1,0 +1,22 @@
+.header-contact {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+  color: #000;
+  transition: 0.4s;
+
+  &:hover {
+    color: var(--bosch-link-color)
+  }
+
+  span {
+    font-weight: var(--bosch-weight-light);
+    font-size: 16px;
+  }
+
+  .svg-icon {
+    use {
+      fill: currentcolor;
+    }
+  }
+}

@@ -4,6 +4,7 @@ mixin news(data)
     .news__list
       if items
         each item in items
+          - description = item.description || null
           .news__item
             .news-card
               a(href=`news-detail.html`).news-card__clickable
@@ -11,4 +12,5 @@ mixin news(data)
               .news-card__date=item.date
               .news-card__info
                 .news-card__title=item.title
-                .news-card__description=item.description
+                if description
+                  .news-card__description=description

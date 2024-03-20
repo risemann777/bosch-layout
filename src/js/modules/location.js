@@ -8,8 +8,6 @@ const location = () => {
   const params = new URLSearchParams(parsedURL.search)
   const cookieName = 'countrySelected'
 
-  console.log(parsedURL)
-
   const cookieOptions = {
     name: cookieName,
     value: 'true',

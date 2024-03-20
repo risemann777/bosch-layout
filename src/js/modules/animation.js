@@ -1,14 +1,17 @@
-import isMobile from "../lib/is-mobile.js";
+import isMobile from '../lib/is-mobile.js'
 export default function animation() {
-  const body = document.body;
+  const html = document.querySelector('html')
   let lastScrollPosition = 0
-  const header = document.querySelector('.header')
+  const headerNav = document.querySelector('.header-nav')
+  const headerTop = document.querySelector('.header-top')
 
   const doSomething = (scrollPos) => {
-    if (scrollPos > 0) {
-      header.classList.add('header--sticky')
+    if (scrollPos > headerTop.clientHeight) {
+      // header.classList.add('header--sticky')
+      // headerTop.style.display = 'none'
     } else {
-      header.classList.remove('header--sticky')
+      // header.classList.remove('header--sticky')
+      // headerTop.style.display = 'flex'
     }
   }
 
@@ -17,9 +20,11 @@ export default function animation() {
     doSomething(lastScrollPosition)
   })
 
-  if (isMobile()) {
-    body.classList.add('page--mobile')
-  } else {
-    body.classList.add('page--desktop')
+  if (!html.classList.contains('bx-core')) {
+    if (isMobile()) {
+      html.classList.add('bx-touch')
+    } else {
+      html.classList.add('bx-no-touch')
+    }
   }
 }

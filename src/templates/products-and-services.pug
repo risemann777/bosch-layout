@@ -1,0 +1,22 @@
+extends layouts/main/layout
+include mixins/product-section-list
+
+block vars
+  - pageTitle = 'Продукция и услуги'
+  - breadcrumbList = [{name: "Продукция и услуги"}];
+
+block content
+  +product-section-list({
+    items: [
+      {
+        picture: 'images/catalog/mobility-solutions-web-portal.webp',
+        name: 'Решения для мобильности',
+        description: 'Bosch разрабатывает инновационные решения, которые обеспечивают новые возможности для мобильности. Для личных или коммерческих автомобилей, мультимодальных транспортных услуг, управления автопарком или интеллектуальной транспортной инфраструктуры – Bosch объединяет автомобильные технологии, облачные сервисы и обслуживание, предлагая комплексные решения для мобильности.'
+      },
+      {
+        picture: 'images/catalog/at-home.webp',
+        name: 'Решения для дома',
+        description: 'Bosch предлагает индивидуальные решения для вашего дома, чтобы постоянно облегчать вашу жизнь.'
+      }
+    ]
+  })

@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--bosch-btn-font-family);
-  font-weight: 400;
+  font-weight: var(--bosch-weight-light);
   user-select: none;
   border: 1px solid var(--bosch-btn-border-color);
   background: var(--bosch-btn-bg);

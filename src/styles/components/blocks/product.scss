@@ -68,6 +68,11 @@
 
     &-description {
       line-height: 1.5;
+      font-weight: var(--bosch-weight-light);
+
+      @media(width >= 576px) {
+        font-size: 18px;
+      }
 
       p {
         &:last-child {

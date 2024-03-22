@@ -1,0 +1,27 @@
+extends layouts/main/layout
+include mixins/product
+
+block vars
+  - pageTitle = 'Промышленность и торговля'
+  - breadcrumbList = [{name: "Продукция и услуги", link: 'products-and-services.html'}, {name: "Промышленность и торговля"}];
+
+block content
+  +product({
+    items: [
+      {
+        name: "Автозапчасти и оборудование",
+        picture: 'images/catalog/auto-parts-and-accesories.webp',
+        description: 'Bosch предлагает широкий ассортимент запчастей для вторичного рынка и ремонтных мастерских (от новых и сменных деталей до решений для ремонта), а также профессиональное ремонтное оборудование, например программное и аппаратное обеспечение для диагностики.',
+        links: [
+          {
+            name: 'Подробнее',
+            href: '#'
+          },
+          {
+            name: 'Гарантийное обслуживание',
+            href: '#'
+          }
+        ]
+      }
+    ]
+  })

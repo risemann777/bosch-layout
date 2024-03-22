@@ -1,0 +1,21 @@
+mixin product-section(data)
+  - items = data.items || null
+  .product-section
+    .product-section__list
+      if items
+        each item in items
+          - picture = item.picture || null
+          - name = item.name || null
+          - description = item.description || null
+          - link = item.link || null
+          .product-section__item
+            .product-section__picture
+              img(src=picture)
+              if link
+                a(href=link.href).product-section__clickable
+            .product-section__info
+              .product-section__name=name
+              .product-section__description=description
+              if link
+                .product-section__links
+                  a(href=link.href class="arrow-link"): span=link.name

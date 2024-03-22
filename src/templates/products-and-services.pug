@@ -1,22 +1,39 @@
 extends layouts/main/layout
-include mixins/product-section-list
+include mixins/product-section
 
 block vars
   - pageTitle = 'Продукция и услуги'
   - breadcrumbList = [{name: "Продукция и услуги"}];
 
 block content
-  +product-section-list({
+  +product-section({
     items: [
       {
         picture: 'images/catalog/mobility-solutions-web-portal.webp',
         name: 'Решения для мобильности',
-        description: 'Bosch разрабатывает инновационные решения, которые обеспечивают новые возможности для мобильности. Для личных или коммерческих автомобилей, мультимодальных транспортных услуг, управления автопарком или интеллектуальной транспортной инфраструктуры – Bosch объединяет автомобильные технологии, облачные сервисы и обслуживание, предлагая комплексные решения для мобильности.'
+        description: 'Bosch разрабатывает инновационные решения, которые обеспечивают новые возможности для мобильности. Для личных или коммерческих автомобилей, мультимодальных транспортных услуг, управления автопарком или интеллектуальной транспортной инфраструктуры – Bosch объединяет автомобильные технологии, облачные сервисы и обслуживание, предлагая комплексные решения для мобильности.',
+        link: {
+          name: 'Подробнее',
+          href: 'products-and-services--mobility.html'
+        }
       },
       {
         picture: 'images/catalog/at-home.webp',
         name: 'Решения для дома',
-        description: 'Bosch предлагает индивидуальные решения для вашего дома, чтобы постоянно облегчать вашу жизнь.'
+        description: 'Bosch предлагает индивидуальные решения для вашего дома, чтобы постоянно облегчать вашу жизнь.',
+        link: {
+          name: 'Подробнее',
+          href: 'products-and-services--at-home.html'
+        }
+      },
+      {
+        picture: 'images/catalog/industry-and-trade.webp',
+        name: 'Промышленность и торговля',
+        description: 'Bosch предлагает индивидуальные решения для вашего дома, чтобы постоянно облегчать вашу жизнь.',
+        link: {
+          name: 'Подробнее',
+          href: 'products-and-services--industry-and-trades.html'
+        }
       }
     ]
   })

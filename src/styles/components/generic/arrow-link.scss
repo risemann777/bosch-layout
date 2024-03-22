@@ -1,0 +1,18 @@
+.arrow-link {
+  color: var(--bosch-link-color);
+  line-height: 1;
+  display: inline-block;
+
+  &::after {
+    content: "\2192";
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+    margin-left: 6px;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(7px);
+    }
+  }
+}

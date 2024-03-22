@@ -1,0 +1,19 @@
+mixin product(data)
+  - items = data.items || null
+  .product
+    if (items)
+      .product__list
+        each item in items
+          - picture = item.picture || null
+          - name = item.name || null
+          - description = item.description || null
+          - links = (item.links && item.links.length) ? item.links : null
+          .product__item
+            .product__picture: img(src=picture)
+            .product__info
+              .product__name=name
+              .product__description=description
+              if links
+                .product__links
+                  each link in links
+                    a(href=link.href class="arrow-link"): span=link.name

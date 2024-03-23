@@ -1,0 +1,16 @@
+mixin warranty-service-section(data)
+  - items = data.items || null
+  .warranty-service-section
+    .warranty-service-section__list
+      if items
+        each item, index in items
+          - name = item.name || null
+          - description = item.description || null
+          - link = item.link || null
+          .warranty-service-section__item
+            if name
+              .warranty-service-section__name=name
+            if description
+              .warranty-service-section__description=description
+            if link
+              a(href=link class="arrow-link") Перейти

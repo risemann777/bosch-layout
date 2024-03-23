@@ -1,0 +1,46 @@
+.warranty-service-section {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+    padding: 20px;
+    border: 1px solid var(--bosch-gray-80);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+    transition: 0.25s;
+    
+    &:hover {
+      box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+    }
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: var(--bosch-weight-bolder);
+    line-height: 1.2;
+
+    @media(width >= 576px) {
+      font-size: 32px;
+    }
+
+    @media(width >= 1400px) {
+      font-size: 30px;
+    }
+  }
+
+  &__clickable {
+    z-index: 7;
+    display: block;
+    position: absolute;
+    inset: 0;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    outline: none;
+  }
+}

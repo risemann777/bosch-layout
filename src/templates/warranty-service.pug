@@ -1,0 +1,22 @@
+extends layouts/main/layout
+include mixins/warranty-service-section
+
+block vars
+  - pageTitle = 'Гарантийное обслуживание'
+  - breadcrumbList = [{name: "Гарантийное обслуживание"}];
+
+block content
+  +warranty-service-section({
+    items: [
+      {
+        name: 'Автозапчасти и оборудование',
+        description: 'Гарантийного обслуживание по автозапчастям и оборудованию',
+        link: 'warranty-service--autoparts.html'
+      },
+      {
+        name: 'Садовые инструменты',
+        description: 'Гарантийное обслуживание садовых инструментов',
+        link: 'warranty-service--garden-tools.html'
+      }
+    ]
+  })

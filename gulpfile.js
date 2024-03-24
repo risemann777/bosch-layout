@@ -14,6 +14,7 @@ import jsTask from "./gulp/tasks/js.js"
 import imgTask from "./gulp/tasks/img.js"
 import fontsTask from "./gulp/tasks/fonts.js"
 import delTask from "./gulp/tasks/clean.js"
+import mediaTask from "./gulp/tasks/media.js"
 
 // function lazyRequireTask(taskName, path) {
 //   gulp.task(taskName, () => {
@@ -65,7 +66,8 @@ gulp.task('build', gulp.series(
     stylesTask,
     jsTask,
     imgTask,
-    fontsTask
+    fontsTask,
+    mediaTask
   )
 ));
 

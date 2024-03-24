@@ -1,0 +1,21 @@
+mixin attached-file(data)
+  - files = data.files || null
+  - title = data.title || null
+  .attached-file
+    if title
+     .attached-file__title=title
+     .attached-file__list
+       if files
+         each file in files
+           - name = file.name || null
+           - url = file.url || null
+           .attached-file__item
+             .attached-file__icon
+               i.document-icon.document-icon--pdf.boschicon-bosch-ic-document-pdf
+             .attached-file__info
+               if name
+                 .attached-file__name=name
+                 .attached-file__link
+                   a(href=url target="_blank" aria-label="Загрузить файл")
+                    span Загрузить файл
+                    i.a-icon.boschicon-bosch-ic-download

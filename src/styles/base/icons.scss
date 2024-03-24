@@ -1,0 +1,73 @@
+[class*=" boschicon-bosch-ic"], [class^="boschicon-bosch-ic"] {
+  font-family: Bosch-Icon, sans-serif;
+}
+
+[class*=" boschicon-bosch-ic"], [class*=" ui-ic"], [class^="boschicon-bosch-ic"], [class^="ui-ic"] {
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=" ui-ic"], [class^="ui-ic"] {
+  font-family: Bosch-UI-Icon, sans-serif;
+}
+
+[dir="rtl"] [class*=" ui-ic"], [dir="rtl"] [class^="ui-ic"] {
+  font-family: Bosch-UI-Icon-RTL, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --ui-ic-nosafe-lr-externallink: "";
+  --boschicon-bosch-ic-download: "";
+  --boschicon-bosch-ic-document: "";
+  --boschicon-bosch-ic-document-pdf: "";
+  --boschicon-bosch-ic-document-doc: "";
+  --boschicon-bosch-ic-document-xls: "";
+  --boschicon-bosch-ic-document-txt: "";
+  --boschicon-bosch-ic-document-rtf: "";
+}
+
+.ui-ic-nosafe-lr-externallink::before {
+  content: var(--ui-ic-nosafe-lr-externallink);
+}
+
+.boschicon-bosch-ic-download::before {
+  content: var(--boschicon-bosch-ic-download);
+}
+
+.boschicon-bosch-ic-document::before {
+  content: var(--boschicon-bosch-ic-document);
+}
+
+.boschicon-bosch-ic-document-pdf::before {
+  content: var(--boschicon-bosch-ic-document-pdf);
+}
+
+.boschicon-bosch-ic-document-doc::before {
+  content: var(--boschicon-bosch-ic-document-doc);
+}
+
+.boschicon-bosch-ic-document-xls::before {
+  content: var(--boschicon-bosch-ic-document-xls);
+}
+
+.boschicon-bosch-ic-document-txt::before {
+  content: var(--boschicon-bosch-ic-document-txt);
+}
+
+.boschicon-bosch-ic-document-rtf::before {
+  content: var(--boschicon-bosch-ic-document-rtf);
+}

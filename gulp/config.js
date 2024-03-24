@@ -8,7 +8,8 @@ export default {
     scriptsModules: 'src/js/blocks/*',
     scriptsBackend: 'src/js/js-for-backend/*',
     fonts: 'src/fonts/**/*',
-    img: ['src/images/**/*']
+    img: ['src/images/**/*'],
+    media: ['src/media/**/*'],
   },
   watch: {
     pug: 'src/templates/**/*.pug',
@@ -24,5 +25,6 @@ export default {
     scripts: 'public/js/',
     img: 'public/images/',
     fonts: 'public/fonts/',
+    media: 'public/media/',
   }
 }

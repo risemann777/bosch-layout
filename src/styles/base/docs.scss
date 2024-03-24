@@ -9,8 +9,12 @@
     margin-top: 2rem;
   }
 
+  ul {
+    padding: 0 0 0 1.1rem;
+  }
+
   ol {
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 0 1rem;
 
     li {
       margin: 0 0 1rem;
@@ -19,5 +23,30 @@
         margin: 1rem 0 1.5rem;
       }
     }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+.document-icon {
+  font-size: 2rem;
+  color: var(--bosch-gray-40);
+  display: inline-block;
+
+  &--pdf {
+    color: var(--bosch-red-50)
+  }
+
+  &--doc {
+    color: var(--bosch-blue-50)
+  }
+
+  &--xls {
+    color: var(--bosch-green-50)
   }
 }

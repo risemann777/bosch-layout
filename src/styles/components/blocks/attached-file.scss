@@ -1,0 +1,41 @@
+.attached-file {
+  &__title {
+    font-size: 24px;
+    font-weight: var(--bosch-weight-bolder);
+    margin: 0 0 2rem;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    .document-icon {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 30px;
+
+    @media(width >= 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__name {
+    font-weight: var(--bosch-weight-bolder);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 10px;
+  }
+}

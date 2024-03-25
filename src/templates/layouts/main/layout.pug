@@ -37,15 +37,18 @@ html(lang='en')
       include ../../components/blocks/mobile-location-popup
 
       main.page__main
+        if isIndexPage
+          include ../../blocks/wide-slider
         .page__container
           if showNavChain
             +breadcrumb({
               items: breadcrumbList
             })
-          +headline({
-            title: pageTitle,
-            text: headlineText
-          })
+          if !isIndexPage
+            +headline({
+              title: pageTitle,
+              text: headlineText
+            })
           .page__content
             block content
 

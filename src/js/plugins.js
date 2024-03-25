@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  new Swiper('#wideSlider', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+  });
+
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });

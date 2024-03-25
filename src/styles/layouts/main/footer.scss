@@ -86,18 +86,6 @@
     }
   }
 
-  &__phone {
-    &-number {
-      font-size: 16px;
-    }
-
-    &-label {
-      font-size: 14px;
-      color: var(--bosch-gray-70);
-      font-weight: var(--bosch-weight-light);
-    }
-  }
-
   &__feedback {
     font-size: 14px;
     display: flex;

@@ -4,9 +4,14 @@ footer.footer.page__footer
       .footer__main
         .footer__aside
           a(href="/").footer__brand: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
-          .footer__phone
-            a(href="tel:+7 (495) 560-9-560").footer__phone-number +7 (495) 560-9-560
-            .footer__phone-label Служба поддержки
+          .footer-phone
+            .footer-phone__list
+              .footer-phone__item
+                a(href="tel:+7 (495) 560-9-560").footer-phone__number +7 (495) 560-9-560
+                .footer-phone__label Служба поддержки по общим вопросам
+              .footer-phone__item
+                a(href="tel:+7 (495) 560-9-560").footer-phone__number 8 (800) 200-29-61
+                .footer-phone__label Служба поддержки БСХ Бытовые приборы
           .footer__feedback(data-drawer-toggle="feedbackDrawer" aria-label="Кнопка обратной связи")
             img(src="images/icons/chat_icon.png")
             span Обратная связь

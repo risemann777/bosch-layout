@@ -1,0 +1,54 @@
+include ../mixins/accordion
+
+.section.section--support
+  .section__aside
+    .section__title.desktop-only Служба поддержки
+    .section__text.desktop-only По вопросам, связанным с применением нашей продукции или сервисам по ремонту и запасным частям.
+  .section__content
+    .section__title.mobile-only Служба поддержки
+    .section__text.mobile-only По вопросам, связанным с применением нашей продукции или сервисам по ремонту и запасным частям.
+    +accordion({
+      contentClass: `accordion-contact`,
+      type: `contact`,
+      items: [
+        {
+          name: "По общим вопросам",
+          phone: {
+            href: "+74955609560",
+            name: "+7 (495) 560-9-560"
+          },
+          email: "contact@ru.bosch.com"
+        },
+        {
+          name: "По электроинструментам",
+          phone: {
+            href: "88001008007",
+            name: "8 (800) 100-8007"
+          }
+        },
+        {
+          name: "По бытовой технике",
+          phone: {
+            href: "88001008007",
+            name: "8 (800) 100-8007"
+          }
+        },
+        {
+          name: "По автомобильным запчастям и оборудованию",
+          phone: {
+            href: "88002002961",
+            name: "8 (800) 200-2961"
+          },
+          email: "hotlineru@bshg.com.ru",
+          site: "https://www.bsh-russia.ru/"
+        },
+        {
+          name: "По системам отопления",
+          phone: {
+            href: "88002000203",
+            name: "8 (800) 200-02-03"
+          },
+          email: "support@bosch-climate.ru",
+        }
+      ]
+    })

@@ -1,0 +1,22 @@
+.footer-phone {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__item {
+    max-width: 180px;
+  }
+
+  &__number {
+    font-size: 16px;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--bosch-gray-70);
+    font-weight: var(--bosch-weight-light);
+  }
+}

@@ -86,15 +86,6 @@
     }
   }
 
-  &__feedback {
-    font-size: 14px;
-    display: flex;
-    column-gap: 5px;
-    align-items: center;
-    cursor: pointer;
-    font-weight: var(--bosch-weight-light);
-  }
-
   &__bottom {
     display: flex;
     justify-content: space-between;

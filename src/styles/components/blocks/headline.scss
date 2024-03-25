@@ -49,5 +49,9 @@
     @media(width >= 1400px) {
       font-size: 26px;
     }
+
+    span {
+      white-space: nowrap;
+    }
   }
 }

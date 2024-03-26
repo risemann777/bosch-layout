@@ -1,4 +1,10 @@
 .news {
+  padding-bottom: 6rem;
+
+  @media(width >= 992px) {
+    padding-bottom: 8rem;
+  }
+
   &__list {
     display: grid;
     grid-gap: 30px;

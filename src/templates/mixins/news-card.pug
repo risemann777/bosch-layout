@@ -1,0 +1,22 @@
+mixin news-card(data)
+  - date = data?.date || '31 декабря 9999';
+  - title = data?.title || 'Заголовок новости'
+  - description = data?.description || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  - image = data?.image || null
+  - link = data?.link || null
+
+  .news-card
+    if link
+      a(href=link).news-card__clickable
+    else
+      a(href=`news-detail.html`).news-card__clickable
+    .news-card__image
+      if image
+        img(src=image)
+    if date
+      .news-card__date=date
+    .news-card__info
+      if title
+        h3.news-card__title=title
+      if description
+        .news-card__description=description

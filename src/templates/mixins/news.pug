@@ -1,3 +1,5 @@
+include news-card
+
 mixin news(data)
   - items = data.items || null
   .news
@@ -6,11 +8,9 @@ mixin news(data)
         each item in items
           - description = item.description || null
           .news__item
-            .news-card
-              a(href=`news-detail.html`).news-card__clickable
-              .news-card__image: img(src=item.image)
-              .news-card__date=item.date
-              .news-card__info
-                .news-card__title=item.title
-                if description
-                  .news-card__description=description
+            +news-card({
+              date: item.date,
+              title: item.title,
+              description: item.description,
+              image: item.image
+            })

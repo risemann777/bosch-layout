@@ -19,8 +19,7 @@
     align-items: center;
     padding: 1.2rem 0;
     color: var(--bosch-gray-30);
-    font-weight: var(--bosch-weight-light);
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   &__arrow {
@@ -69,7 +68,6 @@
       transition: 0.1s;
       column-gap: 10px;
       justify-content: space-between;
-      font-weight: var(--bosch-weight-light);
 
       &:hover {
         color: #000;

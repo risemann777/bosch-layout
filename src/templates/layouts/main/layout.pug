@@ -1,5 +1,6 @@
 include ../../mixins/headline
 include ../../mixins/breadcrumb
+include ../../mixins/wide-slider
 
 - browserTitle = 'Bosch-layout | Главная';
 - pageTitle = '';
@@ -34,25 +35,58 @@ html(lang='en')
       block header
         include header
 
-      include ../../components/blocks/mobile-location-popup
+      include ../../blocks/mobile-location-popup
 
       main.page__main
+        if isIndexPage
+          +wide-slider({
+            slides: [
+              {
+                title: 'Решения для автомобилей',
+                image: 'images/catalog/auto-parts-and-accesories.webp',
+                description: 'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.',
+                contentPosition: 'left',
+                links: [
+                  {
+                    name: 'Узнать подробнее',
+                    url: ''
+                  },
+                  {
+                    name: 'Гарантийное обслуживание',
+                    url: ''
+                  }
+                ]
+              },
+              {
+                title: 'Технологии для вашего дома и сада',
+                image: 'images/catalog/psm-200-aes-multi-sander.webp',
+                contentPosition: 'left'
+              },
+              {
+                title: 'Промышленность и торговля',
+                image: 'images/catalog/industry-and-trade.webp',
+                contentPosition: 'right'
+              }
+            ]
+          })
+
         .page__container
           if showNavChain
             +breadcrumb({
               items: breadcrumbList
             })
-          +headline({
-            title: pageTitle,
-            text: headlineText
-          })
+          if !isIndexPage
+            +headline({
+              title: pageTitle,
+              text: headlineText
+            })
           .page__content
             block content
 
       block footer
         include footer
 
-    include ../../components/blocks/drawers
+    include ../../blocks/drawers
 
     script(src='js/plugins.bundle.js')
     script(src='js/main.bundle.js')

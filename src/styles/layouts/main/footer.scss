@@ -2,8 +2,8 @@
   border-top: 1px solid var(--bosch-gray-90);
 
   &__container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 1320px;
@@ -11,9 +11,9 @@
     flex-direction: column;
     row-gap: 10px;
 
-    @media(width >= 1024px) {
-      padding-left: 32px;
-      padding-right: 32px;
+    @media(width >= 992px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 
@@ -101,7 +101,6 @@
 
   &__copyright {
     font-size: 14px;
-    font-weight: var(--bosch-weight-light);
 
     span {
       white-space: nowrap;
@@ -113,7 +112,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px 15px;
-    font-weight: var(--bosch-weight-light);
 
     a {
       color: inherit;

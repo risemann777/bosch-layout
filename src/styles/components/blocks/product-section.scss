@@ -44,16 +44,16 @@
 
   &__name {
     margin: 0 0 20px;
-    font-size: 28px;
+    font-size: 1.5rem;
     font-weight: var(--bosch-weight-bolder);
     line-height: 1.2;
 
-    @media(width >= 576px) {
-      font-size: 32px;
+    @media(width >= 768px) {
+      font-size: 2rem;
     }
 
-    @media(width >= 1400px) {
-      font-size: 36px;
+    @media(width >= 992px) {
+      font-size: 2.5rem;
     }
   }
 

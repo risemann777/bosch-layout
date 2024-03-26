@@ -1,0 +1,26 @@
+include news-card
+
+mixin news-slider(data)
+  - slides = data.slides || null
+  .news-slider
+    .news-slider__header
+      .news-slider__title
+        a(href="news.html")
+          span Новости
+          i.ui-ic-forward-small-bold
+          // svg(class="svg-icon" viewBox="0 0 1024 1024" width="24" height="24"): use(xlink:href="#svg-arrow-right")
+    #newsSlider.swiper
+      .swiper-wrapper
+        if slides
+          each slide in slides
+            - title = slide?.title || null
+            - description = slide?.description || null
+            - image = slide?.image || null
+            .swiper-slide
+              +news-card({
+                title,
+                description,
+                image
+              })
+      .swiper-button-prev
+      .swiper-button-next

@@ -1,0 +1,36 @@
+mixin wide-slider(data)
+  - slides = data?.slides || null
+  .wide-slider
+    #wideSlider.swiper
+      .swiper-wrapper
+        if slides
+          each slide in slides
+            - image = slide?.image || null
+            - title = slide?.title || null
+            - description = slide?.description || null
+            - link = slide?.link || '#'
+            - links = slide?.links || null
+            - position = slide?.contentPosition || 'left'
+            .swiper-slide
+              .wide-slide(class=`wide-slide--content-${position}`)
+                .wide-slide__bg
+                  if image
+                    img(src=image)
+                .wide-slide__wrapper
+                  .wide-slide__container
+                    .wide-slide__content
+                      if title
+                        .wide-slide__title=title
+                      if description
+                        .wide-slide__description=description
+                      .wide-slide__links
+                        if (links && links.length > 0)
+                          each link in links
+                            - name = link?.name || ''
+                            - url = link?.url || ''
+                            a(href=url).btn.btn--primary=name
+                        else
+                          a(href=link).btn.btn--primary Узнать подробнее
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next

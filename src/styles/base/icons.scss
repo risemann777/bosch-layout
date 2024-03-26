@@ -38,6 +38,7 @@
   --boschicon-bosch-ic-document-xls: "";
   --boschicon-bosch-ic-document-txt: "";
   --boschicon-bosch-ic-document-rtf: "";
+  --ui-ic-forward-small-bold: "";
 }
 
 .ui-ic-nosafe-lr-externallink::before {
@@ -70,4 +71,8 @@
 
 .boschicon-bosch-ic-document-rtf::before {
   content: var(--boschicon-bosch-ic-document-rtf);
+}
+
+.ui-ic-forward-small-bold::before {
+  content: var(--ui-ic-forward-small-bold);
 }

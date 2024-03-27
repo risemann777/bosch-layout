@@ -1,26 +1,20 @@
 .footer-menu {
   flex-shrink: 0;
-  min-width: 25%;
 
   &__list {
     list-style: none;
     padding: 0;
+    margin: 0;
 
-    @media(width >= 1200px) {
+
+    @media(width >= 1024px) {
       display: flex;
-      flex-wrap: wrap;
-      margin: 0 -10px;
+      gap: 1rem 1.2rem;
     }
   }
 
   &__item {
-    width: 100%;
 
-    @media(width >= 1200px) {
-      max-width: 50%;
-      flex: 0 0 50%;
-      padding: 0 10px;
-    }
   }
 
   &__link {
@@ -28,6 +22,6 @@
     color: inherit;
     transition: 0.25s;
     padding: 0.5rem 0;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }

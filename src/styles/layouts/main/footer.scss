@@ -18,16 +18,16 @@
   }
 
   &__content {
-    padding: 50px 0 20px;
+    padding: 2rem 0 0;
     display: flex;
     justify-content: space-between;
-    row-gap: 70px;
+    row-gap: 3rem;
     flex-direction: column;
   }
 
   &__main {
     display: flex;
-    gap: 40px 10%;
+    gap: 2rem 3rem;
     justify-content: space-between;
     flex-direction: column;
 
@@ -36,54 +36,22 @@
     }
   }
 
-  &__aside {
-    flex-shrink: 0;
-    display: grid;
-    gap: 25px 25px;
-    justify-content: space-between;
-
-    @media(width >= 420px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    @media(width >= 640px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: initial;
-      gap: 25px;
-    }
-  }
-
   &__navbar {
-    @media(width >= 480px) {
-      display: flex;
-      gap: 20px 40px;
-    }
-
-    @media(width >= 576px) {
-      flex: 1 1 auto;
-    }
-
-    @media(width >= 992px) {
-      justify-content: space-between;
-    }
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    flex-shrink: 0;
   }
 
-  &__brand {
-    display: block;
-    flex-shrink: 0;
-    text-decoration: none;
+  &__claim {
+    font-size: 1.5rem;
+  }
 
-    @media(width >= 640px) {
-      padding-top: 0.5rem;
-    }
-
-    .svg-icon {
-      width: 115px;
-      height: auto;
-      transition: all 0.25s;
-    }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 0.5rem;
   }
 
   &__bottom {
@@ -91,12 +59,8 @@
     justify-content: space-between;
     gap: 16px 20px;
     flex-wrap: wrap;
-  }
-
-  &__contact {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    border-top: 1px solid var(--bosch-gray-90);
+    padding: 2rem 0;
   }
 
   &__copyright {

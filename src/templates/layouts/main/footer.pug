@@ -2,40 +2,32 @@ footer.footer.page__footer
   .footer__container
     .footer__content
       .footer__main
-        .footer__aside
-          a(href="/").footer__brand: svg(class="svg-icon" viewBox="0 0 433 97" width="433" height="98"): use(xlink:href="#svg-logo")
-          .footer__contact
-            .footer-phone
-              .footer-phone__list
-                .footer-phone__item
-                  a(href="tel:+7 (495) 560-9-560").footer-phone__number +7 (495) 560-9-560
-                  .footer-phone__label Служба поддержки по общим вопросам
-                .footer-phone__item
-                  a(href="tel:+7 (495) 560-9-560").footer-phone__number 8 (800) 200-29-61
-                  .footer-phone__label Служба поддержки БСХ Бытовые приборы
-            a(href="mailto:contact@ru.bosch.com" class="footer__email") contact@ru.bosch.com
         .footer__navbar
+          .footer__claim Разработано для жизни
           .footer-menu
             ul.footer-menu__list
               li.footer-menu__item
-                a(href="support.html").footer-menu__link Поддержка
-              li.footer-menu__item
                 a(href="our-company.html").footer-menu__link О компании
               li.footer-menu__item
-                a(href="contacts.html").footer-menu__link Контакты
-              li.footer-menu__item
                 a(href="news.html").footer-menu__link Новости
-          .footer-catalog
-            .footer-catalog__title: a(href="catalog.html") Каталог
-            .footer-catalog__list
-              .footer-catalog__item
-                a(href="#").footer-catalog__link Электроинструменты
-              .footer-catalog__item
-                a(href="#").footer-catalog__link Бытовая техника
-              .footer-catalog__item
-                a(href="#").footer-catalog__link Автомобильные запчасти и оборудование
-              .footer-catalog__item
-                a(href="#").footer-catalog__link Системы отопления
+              li.footer-menu__item
+                a(href="products-and-services.html").footer-menu__link Продукция и услуги
+              li.footer-menu__item
+                a(href="contacts.html").footer-menu__link Контакты
+
+        .footer__contact
+          .footer-contact
+            .footer-contact__list
+              .footer-contact__item
+                .footer-contact__title Служба поддержки по общим вопросам
+                .footer-contact__display
+                  .footer-contact__value: a(href="tel:+7 (495) 560-9-560") +7 (495) 560-9-560
+                  .footer-contact__value: a(href="mailto:contact@ru.bosch.com") contact@ru.bosch.com
+              .footer-contact__item
+                .footer-contact__title Служба поддержки BSH Бытовые приборы
+                .footer-contact__display
+                  .footer-contact__value: a(href="tel:+7 (800) 200-29-61") +7 (800) 200-29-61
+                  .footer-contact__value: a(href="mailto:hotlineru@bshg.com.ru") hotlineru@bshg.com.ru
 
       .footer__bottom
         .footer__copyright <span>&copy; 2024 Роберт Бош ООО,</span> <span>все права защищены</span>

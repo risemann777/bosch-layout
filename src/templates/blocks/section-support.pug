@@ -12,12 +12,23 @@ include ../mixins/accordion
       type: `contact`,
       items: [
         {
-          name: "По общим вопросам",
-          phone: {
-            href: "+74955609560",
-            name: "+7 (495) 560-9-560"
-          },
-          email: "contact@ru.bosch.com"
+          name: "Общие вопросы",
+          groups: [
+            {
+              name: 'bvz',
+              contacts: [
+                {
+                  type: 'phone',
+                  name: 'Телефон',
+                  value: '+7 (495) 560-9-560'
+                },
+                {
+                  type: 'email',
+                  value: 'contact@ru.bosch.com'
+                }
+              ]
+            }
+          ],
         },
         {
           name: "По электроинструментам",
@@ -28,27 +39,44 @@ include ../mixins/accordion
         },
         {
           name: "По бытовой технике",
-          phone: {
-            href: "88001008007",
-            name: "8 (800) 100-8007"
-          }
+          groups: []
         },
         {
           name: "По автомобильным запчастям и оборудованию",
-          phone: {
-            href: "88002002961",
-            name: "8 (800) 200-2961"
-          },
-          email: "hotlineru@bshg.com.ru",
-          site: "https://www.bsh-russia.ru/"
+          groups: []
         },
         {
-          name: "По системам отопления",
-          phone: {
-            href: "88002000203",
-            name: "8 (800) 200-02-03"
-          },
-          email: "support@bosch-climate.ru",
+          name: "Отопление и горячее водоснабжение",
+          groups: [
+            {
+              name: 'Общие вопросы',
+              contacts: [
+                {
+                  type: 'phone',
+                  name: 'Телефон',
+                  value: '+7 (495) 560-9-560'
+                },
+                {
+                  type: 'email',
+                  value: 'contact@ru.bosch.com'
+                }
+              ]
+            },
+            {
+              name: 'Промышленные отопительные установки',
+              contacts: [
+                {
+                  type: 'phone',
+                  name: 'Телефон',
+                  value: '+7 (495) 560-9-560'
+                },
+                {
+                  type: 'email',
+                  value: 'contact@ru.bosch.com'
+                }
+              ]
+            }
+          ]
         }
       ]
     })

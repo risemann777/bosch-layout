@@ -53,6 +53,18 @@
     }
   }
 
+  &__content {
+    padding-bottom: 4rem;
+
+    @media(width >= 576px) {
+      padding-bottom: 6rem;
+    }
+
+    @media(width >= 992px) {
+      padding-bottom: 8rem;
+    }
+  }
+
   &__breadcrumb {
     margin: 2rem 0;
   }

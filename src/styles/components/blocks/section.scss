@@ -17,6 +17,10 @@
     flex-direction: row;
   }
 
+  &:last-child {
+    padding: 0;
+  }
+
   &__aside {
     width: 30%;
     flex-shrink: 0;

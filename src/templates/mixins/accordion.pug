@@ -12,20 +12,19 @@ mixin accordion(data)
                 .accordion__name=item.name
               svg(class="svg-icon accordion__arrow" viewBox="0 0 1024 1024" width="16" height="16"): use(xlink:href="#svg-arrow-down")
             .accordion__body
-              .accordion__content(class=`${contentClass}`)
+              .accordion__content(class=`accordion-${type}`)
                 if (type === 'contact')
-                  if (item.phone)
-                    div(class=`${contentClass}__item`)
-                      div(class=`${contentClass}__label`) Телефон:
-                      div(class=`${contentClass}__value`)
-                        a(href=`tel:${item.phone.href}`)=item.phone.name
-                  if (item.email)
-                    div(class=`${contentClass}__item`)
-                      div(class=`${contentClass}__label`) E-mail:
-                      div(class=`${contentClass}__value`)
-                        a(href=`mailto:${item.email}`)=item.email
-                  if (item.site)
-                    div(class=`${contentClass}__item`)
-                      div(class=`${contentClass}__label`) Сайт:
-                      div(class=`${contentClass}__value`)
-                        a(href=`${item.site}`)=item.site
+                  div(class=`accordion-${type}__list`)
+                    div(class=`accordion-${type}__item`)
+                      div(class=`accordion-${type}__name`) Общие вопросы:
+                      div(class=`accordion-${type}__value`)
+                        ul
+                          li Телефон <a href="tel:+795984984">+795984984</a>
+                          li E-mail <a href="mailto:bosch@by.bosch.com">bosch@by.bosch.com</a>
+                    div(class=`accordion-${type}__item`)
+                      div(class=`accordion-${type}__name`) Промышленные отопительные установки:
+                      div(class=`accordion-${type}__value`)
+                        ul
+                          li Адрес: ул. Тимирязева, 67-701,<br>Минск, Республика Беларусь, 220035
+                          li Телефон <a href="tel:+795984984">+795984984</a>
+                          li E-mail <a href="mailto:bosch@by.bosch.com">bosch@by.bosch.com</a>

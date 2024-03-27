@@ -1,6 +1,23 @@
 .news-detail {
+  &__subtitle {
+    margin: 0 0 3rem;
+    font-size: 1.25rem;
+  }
+
   &__picture {
-    margin: 0 0 40px;
+    margin: 0 0 3rem;
+  }
+
+  &__intro {
+    font-size: 1.25rem;
+
+    @media(width >= 576px) {
+      padding: 0 3rem;
+    }
+
+    @media(width >= 1024px) {
+      padding: 0 6rem;
+    }
   }
 
   img {
@@ -12,11 +29,11 @@
 
   &__date {
     font-weight: var(--bosch-weight-bolder);
-    margin: 0 0 30px;
+    margin: 0 0 3rem;
   }
 
   &__back {
-    margin: 40px 0 0;
+    margin: 3rem 0 0;
 
     &-link {
       color: inherit;
@@ -27,6 +44,6 @@
   }
 
   &__section {
-    margin: 0 0 30px;
+    margin: 0 0 3rem;
   }
 }

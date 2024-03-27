@@ -1,7 +1,6 @@
 .news-detail-gallery {
   display: grid;
-  gap: 20px;
-  padding: 30px 0;
+  gap: 1rem;
 
   @media(width >= 480px) {
     grid-template-columns: repeat(2, 1fr);

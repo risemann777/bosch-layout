@@ -1,5 +1,5 @@
 .product-section {
-  &__list {
+   &__list {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
@@ -59,10 +59,6 @@
 
   &__description {
     line-height: 1.5;
-
-    @media(width >= 576px) {
-      font-size: 18px;
-    }
 
     p {
       &:last-child {

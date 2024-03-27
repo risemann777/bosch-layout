@@ -55,17 +55,16 @@
   }
 
   &__title {
-    font-size: 28px;
-    font-weight: var(--bosch-weight-light);
+    font-size: 1.5rem;
+    font-weight: var(--bosch-weight-bolder);
 
-    @media(width >= 1024px) {
-      font-size: 36px;
+    @media(width >= 992px) {
+      font-size: 2rem;
     }
   }
 
   &__subtitle {
-    font-weight: var(--bosch-weight-light);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--bosch-gray-30);
   }
 

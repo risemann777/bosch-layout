@@ -10,7 +10,8 @@ mixin product-section(data)
           - link = item.link || null
           .product-section__item
             .product-section__picture
-              img(src=picture)
+              .product-section__image
+                img(src=picture)
               if link
                 a(href=link.href).product-section__clickable
             .product-section__info
@@ -18,4 +19,4 @@ mixin product-section(data)
               .product-section__description=description
               if link
                 .product-section__links
-                  a(href=link.href class="arrow-link"): span=link.name
+                  a(href=link.href class="btn btn--primary"): span=link.name

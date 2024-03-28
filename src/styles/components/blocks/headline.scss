@@ -14,20 +14,16 @@
   }
 
   &__title {
-    font-size: 32px;
+    font-size: 2rem;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.2;
 
-    @media(width >= 576px) {
-      font-size: 40px;
+    @media(width >= 768px) {
+      font-size: 2.5rem;
     }
 
-    @media(width >= 1024px) {
-      font-size: 48px;
-    }
-
-    @media(width >= 1400px) {
-      font-size: 64px;
+    @media(width >= 992px) {
+      font-size: 4rem;
     }
   }
 

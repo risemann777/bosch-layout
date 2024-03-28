@@ -6,17 +6,24 @@ mixin news-card(data)
   - link = data?.link || null
 
   .news-card
-    if link
-      a(href=link).news-card__clickable
-    else
-      a(href=`news-detail.html`).news-card__clickable
-    .news-card__image
-      if image
-        img(src=image)
-    if date
-      .news-card__date=date
+    figure.news-card__figure
+      if link
+        a(href=link).news-card__clickable
+      else
+        a(href=`news-detail.html`).news-card__clickable
+      .news-card__image
+        if image
+          img(src=image)
     .news-card__info
+      .news-card__subtitle
+        if date
+          .news-card__date=date
       if title
-        h3.news-card__title=title
+        h3.news-card__title
+          span=title
+          if link
+            a(href=link).news-card__clickable
+          else
+            a(href=`news-detail.html`).news-card__clickable
       if description
         .news-card__description=description

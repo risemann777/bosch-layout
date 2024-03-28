@@ -9,7 +9,9 @@ mixin product(data)
           - description = item.description || null
           - links = (item.links && item.links.length) ? item.links : null
           .product__item
-            .product__picture: img(src=picture)
+            .product__picture
+              .product__image
+                img(src=picture)
             .product__info
               .product__name=name
               .product__description=description

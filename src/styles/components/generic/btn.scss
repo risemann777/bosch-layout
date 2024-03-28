@@ -2,21 +2,23 @@
 
 .btn {
   --bosch-btn-bg: transparent;
-  --bosch-btn-padding-y: 0.9rem;
-  --bosch-btn-padding-x: 1.2rem;
+  --bosch-btn-padding-y: 0;
+  --bosch-btn-padding-x: 1rem;
   --bosch-btn-lg-padding-y: 16px;
   --bosch-btn-lg-padding-x: 30px;
   --bosch-btn-border-radius: 0;
   --bosch-btn-lg-border-radius: 0.6rem;
   --bosch-btn-font-family: var(--bosch-font-family);
-  --bosch-btn-font-size: 16px;
+  --bosch-btn-font-size: 1rem;
   --bosch-btn-border-color: transparent;
+  --bosch-btn-height: 3rem;
 
   display: inline-flex;
+  height: var(--bosch-btn-height);
   align-items: center;
   justify-content: center;
   font-family: var(--bosch-btn-font-family);
-  font-weight: var(--bosch-weight-light);
+  font-weight: var(--bosch-body-font-weight);
   user-select: none;
   border: 1px solid var(--bosch-btn-border-color);
   background: var(--bosch-btn-bg);
@@ -47,6 +49,8 @@
 
   span {
     z-index: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .svg-icon {

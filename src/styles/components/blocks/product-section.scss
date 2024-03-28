@@ -1,17 +1,20 @@
 .product-section {
    &__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 100px;
+    margin: 0 0 1rem;
   }
 
   &__picture {
     position: relative;
-    overflow: hidden;
 
     @media(width >= 1024px) {
       grid-row: 1;
     }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    background: var(--bosch-gray-80);
 
     &::after {
       content: "";
@@ -43,7 +46,7 @@
   }
 
   &__name {
-    margin: 0 0 20px;
+    margin: 0 0 1rem;
     font-size: 1.5rem;
     font-weight: var(--bosch-weight-bolder);
     line-height: 1.2;
@@ -51,16 +54,15 @@
     @media(width >= 768px) {
       font-size: 2rem;
     }
-
-    @media(width >= 992px) {
-      font-size: 2.5rem;
-    }
   }
 
   &__description {
     line-height: 1.5;
+    margin: 0 0 1.5rem;
 
     p {
+      margin: 0 0 0.5rem;
+
       &:last-child {
         margin: 0;
       }
@@ -68,7 +70,19 @@
   }
 
   &__links {
-    margin-top: 20px;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .btn {
+      max-width: 100%;
+      width: 100%;
+
+      @media(width >= 768px) {
+        width: auto;
+      }
+    }
   }
 
   &__clickable {
@@ -85,6 +99,7 @@
   &__item {
     display: grid;
     grid-gap: 30px;
+    margin: 0 0 5rem;
 
     @media(width >= 1024px) {
       grid-template-columns: repeat(4, 1fr);

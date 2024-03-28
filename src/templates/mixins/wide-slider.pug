@@ -28,9 +28,11 @@ mixin wide-slider(data)
                           each link in links
                             - name = link?.name || ''
                             - url = link?.url || ''
-                            a(href=url).btn.btn--primary=name
+                            a(href=url title=name).btn.btn--primary
+                              span=name
                         else
-                          a(href=link).btn.btn--primary Узнать подробнее
+                          a(href=link).btn.btn--primary
+                            span Узнать подробнее
       .swiper-pagination
       .swiper-button-prev
       .swiper-button-next

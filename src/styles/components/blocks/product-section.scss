@@ -5,9 +5,11 @@
 
   &__picture {
     position: relative;
+    margin: 0 0 1.5rem;
 
     @media(width >= 1024px) {
       grid-row: 1;
+      margin: 0;
     }
   }
 
@@ -97,11 +99,15 @@
   }
 
   &__item {
-    display: grid;
-    grid-gap: 30px;
     margin: 0 0 5rem;
 
+    &:last-child {
+      margin: 0;
+    }
+
     @media(width >= 1024px) {
+      display: grid;
+      grid-gap: 2rem;
       grid-template-columns: repeat(4, 1fr);
     }
 

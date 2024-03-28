@@ -34,9 +34,10 @@
 
   &__back {
     margin: 3rem 0 0;
+    border-top: 1px solid var(--bosch-gray-90);
+    padding: 2rem 0;
 
     &-link {
-      color: inherit;
       display: inline-flex;
       column-gap: 10px;
       align-items: center;
